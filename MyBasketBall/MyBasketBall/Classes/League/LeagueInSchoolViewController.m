@@ -28,14 +28,9 @@
     [super viewDidLoad];
 
     self.title = @"校内联赛";
-    // Do any additional setup after loading the view.
-
-    
     self.arrayDatas = [[NSMutableArray alloc] init];
-    
     [self initTableView];
     [self initRefresh];
-
     [self.myTableView.mj_header beginRefreshing];
 
 }

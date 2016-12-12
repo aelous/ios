@@ -9,6 +9,6 @@
 
 #import "BaseViewController.h"
 
-@interface LeagueBetweenSchoolViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@interface LeagueBetweenSchoolViewController : BaseViewController
 
 @end

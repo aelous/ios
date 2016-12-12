@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface LeagueInSchoolViewController : BaseViewController<UITableViewDelegate,UITableViewDataSource>
+@interface LeagueInSchoolViewController : BaseViewController
 
 @end
