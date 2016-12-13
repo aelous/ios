@@ -86,14 +86,14 @@
 {
     NSArray* items=[NSArray arrayWithObjects:@"校内联赛", @"校际联赛", @"我的", nil];
     _HMSegmentedCtrl = [[HMSegmentedControl alloc]initWithSectionTitles:items];
-    _HMSegmentedCtrl.frame = CGRectMake(0, 64, SCR_W, SEGMENT_HEIGHT);
+    _HMSegmentedCtrl.frame = CGRectMake(0, 0, SCR_W, SEGMENT_HEIGHT);
     //    [_HMSegmentedCtrl addBottomLine];
     //    _HMSegmentedCtrl.backgroundColor = [UIColor colorWithRed:0.96 green:0.96 blue:0.96 alpha:1];
-    _HMSegmentedCtrl.backgroundColor = UIColorFromRGB(LZCOLOR_MAIN);
+    _HMSegmentedCtrl.backgroundColor = [UIColor whiteColor];
     //设置导航标题的颜色及字体大小
-    _HMSegmentedCtrl.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:text_size_small]};
-    _HMSegmentedCtrl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};  //BLUECOLOR
-    _HMSegmentedCtrl.selectionIndicatorColor = [UIColor whiteColor];
+    _HMSegmentedCtrl.titleTextAttributes = @{NSForegroundColorAttributeName:UIColorFromRGB(LZCOLOR_MAIN),NSFontAttributeName:[UIFont systemFontOfSize:text_size_small]};
+    _HMSegmentedCtrl.selectedTitleTextAttributes = @{NSForegroundColorAttributeName:UIColorFromRGB(LZCOLOR_MAIN)};  //BLUECOLOR
+    _HMSegmentedCtrl.selectionIndicatorColor = UIColorFromRGB(LZCOLOR_MAIN);
     _HMSegmentedCtrl.selectionIndicatorHeight = 3;
     _HMSegmentedCtrl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     _HMSegmentedCtrl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;

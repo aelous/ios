@@ -127,6 +127,7 @@
 		C9A0987C1DFC577A00B5B6BD /* TeamGloryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098761DFC577A00B5B6BD /* TeamGloryCell.xib */; };
 		C9A0987F1DFCF0D900B5B6BD /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */; };
 		C9A098831DFCF21C00B5B6BD /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098821DFCF21C00B5B6BD /* FollowViewController.m */; };
+		C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098881E00468F00B5B6BD /* UIImage+color.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -438,6 +439,8 @@
 		C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		C9A098811DFCF21C00B5B6BD /* FollowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowViewController.h; sourceTree = "<group>"; };
 		C9A098821DFCF21C00B5B6BD /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
+		C9A098871E00468F00B5B6BD /* UIImage+color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+color.h"; sourceTree = "<group>"; };
+		C9A098881E00468F00B5B6BD /* UIImage+color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+color.m"; sourceTree = "<group>"; };
 		E231519DFEA2F0F26CF86AC5 /* Pods-MyBasketBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1112,6 +1115,8 @@
 				C9A098581DFC39E900B5B6BD /* UILabel+Custom.m */,
 				C9A098591DFC39E900B5B6BD /* UIButton+Custom.h */,
 				C9A0985A1DFC39E900B5B6BD /* UIButton+Custom.m */,
+				C9A098871E00468F00B5B6BD /* UIImage+color.h */,
+				C9A098881E00468F00B5B6BD /* UIImage+color.m */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -1395,6 +1400,7 @@
 				049C40181DC88651000878BB /* GetLeagueInSchoolThread.m in Sources */,
 				04B714141DBCBDCE006E067F /* RegisterPersonInfoViewController.m in Sources */,
 				04B714121DBCBDCE006E067F /* LoginViewModel.m in Sources */,
+				C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */,
 				04B7146C1DBCBDCE006E067F /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
 				04B714181DBCBDCE006E067F /* RegisterPickerTableViewCell.m in Sources */,
 				04B714731DBCBDCE006E067F /* SBJsonStreamParserAccumulator.m in Sources */,

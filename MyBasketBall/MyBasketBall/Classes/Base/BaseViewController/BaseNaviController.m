@@ -8,7 +8,7 @@
 
 #import "BaseNaviController.h"
 #import "UIColor+StringColor.h"
-
+#import "UIImage+color.h"
 @interface BaseNaviController ()
 
 @end
@@ -20,9 +20,11 @@
     
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setTintColor:[UIColor whiteColor]];
-    [navigationBar setBarTintColor:[UIColor ms_colorWithHexString:@"#224FA2"]];
     NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     [navigationBar setTitleTextAttributes:attributes];
+    [navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor ms_colorWithHexString:@"#224FA2"] withSize:CGSizeMake(self.view.bounds.size.width, 64)] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    [navigationBar setShadowImage:[[UIImage alloc] init]];
+//    [navigationBar setBarTintColor:[UIColor ms_colorWithHexString:@"#224FA2"]];
     
 //    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:nil action:nil];
 //    self.navigationItem.leftBarButtonItem = item;
@@ -33,14 +35,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
