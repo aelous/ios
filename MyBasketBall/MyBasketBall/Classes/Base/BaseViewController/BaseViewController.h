@@ -24,12 +24,12 @@
 @property (strong, nonatomic) UITableView *tableView;
 
 
--(void)initLeftBarButtonItem ;
 - (void)backToSuper ;
 
 - (void)setExtraCellLineHidden:(UITableView *)tableView;
 
--(void)initrightBarButtonItem:(NSString*)title action:(SEL)action;
+- (void)setCustomRightBarButtonItem;
+- (void)setCustomNavigationLeftBar;
 
 - (void)showSuccessHud:(NSUInteger)section ;
 
@@ -59,5 +59,5 @@
 -(void)showHud;
 -(void)hideHud;
 
-- (void)setCustomNavigationLeftBar;
+
 @end

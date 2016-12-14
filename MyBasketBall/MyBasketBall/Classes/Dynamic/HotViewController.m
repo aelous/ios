@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setCustomRightBarButtonItem];
     [self prepareUI];
 }
 

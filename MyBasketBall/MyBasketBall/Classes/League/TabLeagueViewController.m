@@ -30,12 +30,9 @@
 //    self.navSuperView.frame = CGRectMake(0, 64, SCR_W, 44);
 //    [self.navSuperView addSubview:_HMSegmentedCtrl];
 //    self.navigationItem.titleView = self.navSuperView;
-
 /*
 //    [self.navigationController.navigationBar addSubview: _HMSegmentedCtrl];
     //    [self setCustomNavigationLeftBar];
-    //    [self initLeftBarButtonItem];
-    // Do any additional setup after loading the view.
 */
 }
 

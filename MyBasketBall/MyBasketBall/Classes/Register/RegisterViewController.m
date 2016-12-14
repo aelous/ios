@@ -41,7 +41,7 @@
     self.title = @"注册";
     
     [self initUI];
-    [self initLeftBarButtonItem];
+    [self setCustomNavigationLeftBar];
 }
 
 - (void)didReceiveMemoryWarning {

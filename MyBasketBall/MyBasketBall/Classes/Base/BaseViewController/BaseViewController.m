@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "UIView+Toast.h"
+#import "TeamMessageController.h"
 
 @interface BaseViewController (){
     JGProgressHUD *_HUD;
@@ -26,15 +27,11 @@
 //    self.navigationController.navigationBar.barTintColor = UIColorFromRGB(LZCOLOR_MAIN);
     //选择自己喜欢的颜色
     UIColor * color = [UIColor whiteColor];
-    
     //这里我们设置的是颜色，还可以设置shadow等，具体可以参见api
     NSDictionary * dict = [NSDictionary dictionaryWithObject:color forKey:NSForegroundColorAttributeName];
-    
     //大功告成
     self.navigationController.navigationBar.titleTextAttributes = dict;
-
     self.view.backgroundColor = [UIColor whiteColor];
-    
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -47,13 +44,11 @@
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
 //    self.navigationController.navigationBar.translucent=NO;
 //    self.tabBarController.tabBar.translucent=NO;
 }
 -(void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-//    self.tabBarController.tabBar.hidden=YES;
 //    self.navigationController.navigationBar.translucent=YES;
 //    self.tabBarController.tabBar.translucent=NO;
 }
@@ -67,19 +62,20 @@
 
 - (void)setCustomNavigationLeftBar {
     
-    [self initLeftBarButtonItem];
-}
-
--(void)initLeftBarButtonItem {
-    
     MyCustomButton *button = [MyCustomButton buttonWithType:UIButtonTypeCustom];
     [button setFrame:CGRectMake(0, 0, 60, 44)];
     UIImage *image = [UIImage imageNamed:@"back"];
     [button setImage:image forState:UIControlStateNormal];
     [button setMyButtonImageFrame:CGRectMake(0, 12, image.size.width-10, image.size.height-10)];
-    [button addTarget:self action:@selector(backToSuper)forControlEvents:UIControlEventTouchDown];
+    [button addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithCustomView:button];
     self.navigationItem.leftBarButtonItem = leftBtn;
+
+}
+
+- (void)leftItemClick {
+
+    NSLog(@"消息");
 }
 
 - (void)backToSuper {
@@ -93,22 +89,27 @@
     [tableView setTableFooterView:view];
 }
 
--(void)initrightBarButtonItem:(NSString*)title action:(SEL)action {
-    
+- (void)setCustomRightBarButtonItem {
     
     MyCustomButton *mapbutton = [MyCustomButton buttonWithType:UIButtonTypeCustom];
     [mapbutton setFrame:CGRectMake(0, 0, 60, 44)];
-    
-    [mapbutton setTitle:title forState:(UIControlStateNormal)];
-    mapbutton.titleLabel.font = [UIFont systemFontOfSize:text_size_small];
-    
-    CGSize titleSize = [mapbutton.titleLabel sizeThatFits:CGSizeMake(60, 44)];
-    [mapbutton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
-    [mapbutton setMyButtonContentFrame:CGRectMake(60 - titleSize.width, 10, titleSize.width, 25)];
-    [mapbutton addTarget:self action:action forControlEvents:UIControlEventTouchDown];
+//    [mapbutton setTitle:title forState:(UIControlStateNormal)];
+//    mapbutton.titleLabel.font = [UIFont systemFontOfSize:text_size_small];
+//    CGSize titleSize = [mapbutton.titleLabel sizeThatFits:CGSizeMake(60, 44)];
+//    [mapbutton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+    UIImage *image = [UIImage imageNamed:@"back"];
+    [mapbutton setImage:image forState:UIControlStateNormal];
+//    [mapbutton setMyButtonContentFrame:CGRectMake(60 - image.size.width, 10, image.size.width, 25)];
+    [mapbutton addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchDown];
     UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc]initWithCustomView:mapbutton];
-    
     self.navigationItem.rightBarButtonItem = rightBtn;
+}
+
+- (void)rightItemClick {
+
+    TeamMessageController *mine = [[TeamMessageController alloc] init];
+    [self.navigationController pushViewController:mine animated:YES];
+    
 }
 
 #pragma mark - 提示信息处理

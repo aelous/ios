@@ -31,7 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"重置密码";
-    [self initLeftBarButtonItem];
+    [self setCustomNavigationLeftBar];
     [self initUI];
     [self initBtn];
 }

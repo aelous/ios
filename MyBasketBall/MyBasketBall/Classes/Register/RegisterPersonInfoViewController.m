@@ -36,7 +36,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"注册";
-    [self initLeftBarButtonItem];
+    [self setCustomNavigationLeftBar];
     [self initUI];
 }
 

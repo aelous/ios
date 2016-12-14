@@ -530,7 +530,6 @@
 		04B712E91DBCBDCE006E067F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C9A098651DFC570D00B5B6BD /* unknown */,
 				04B712EA1DBCBDCE006E067F /* Base */,
 				04B712F21DBCBDCE006E067F /* Hot(热门) */,
 				C9A098801DFCF18500B5B6BD /* follow(关注) */,
@@ -547,6 +546,7 @@
 		04B712EA1DBCBDCE006E067F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
 				04B712EB1DBCBDCE006E067F /* BaseViewController */,
 				04B712EE1DBCBDCE006E067F /* BaseViewModel */,
 			);
@@ -1130,14 +1130,6 @@
 			name = testdata;
 			sourceTree = "<group>";
 		};
-		C9A098651DFC570D00B5B6BD /* unknown */ = {
-			isa = PBXGroup;
-			children = (
-				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
-			);
-			name = unknown;
-			sourceTree = "<group>";
-		};
 		C9A098661DFC573800B5B6BD /* TeamDetailInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1146,6 +1138,7 @@
 				C9A098681DFC575600B5B6BD /* TeamMessageController.m */,
 			);
 			name = TeamDetailInfo;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		C9A0986A1DFC575D00B5B6BD /* view */ = {
