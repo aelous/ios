@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setCustomNavigationLeftBar];
+    [self setCustomLeftBarButtonItem];
     self.title = @"比赛的title";
     
 }

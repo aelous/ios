@@ -35,7 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setCustomNavigationLeftBar];
+    [self setCustomLeftBarButtonItem];
     self.title = @"北工大篮球联赛";
     // Do any additional setup after loading the view.
 }

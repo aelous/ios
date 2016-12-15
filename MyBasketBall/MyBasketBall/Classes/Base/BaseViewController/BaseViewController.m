@@ -8,7 +8,8 @@
 
 #import "BaseViewController.h"
 #import "UIView+Toast.h"
-#import "TeamMessageController.h"
+#import "MineViewController.h"
+#import "MessageViewController.h"
 
 @interface BaseViewController (){
     JGProgressHUD *_HUD;
@@ -60,22 +61,25 @@
 
 #pragma mark - ui
 
-- (void)setCustomNavigationLeftBar {
+- (void)setCustomLeftBarButtonItem {
     
-    MyCustomButton *button = [MyCustomButton buttonWithType:UIButtonTypeCustom];
-    [button setFrame:CGRectMake(0, 0, 60, 44)];
+//    MyCustomButton *button = [MyCustomButton buttonWithType:UIButtonTypeCustom];
+//    [button setFrame:CGRectMake(0, 0, 60, 44)];
     UIImage *image = [UIImage imageNamed:@"back"];
-    [button setImage:image forState:UIControlStateNormal];
-    [button setMyButtonImageFrame:CGRectMake(0, 12, image.size.width-10, image.size.height-10)];
-    [button addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchDown];
-    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithCustomView:button];
-    self.navigationItem.leftBarButtonItem = leftBtn;
+//    [button setImage:image forState:UIControlStateNormal];
+//    [button setMyButtonImageFrame:CGRectMake(0, 12, image.size.width-10, image.size.height-10)];
+//    [button addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchDown];
+//    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithCustomView:button];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(leftItemClick)];
+    self.navigationItem.leftBarButtonItem = item;
 
 }
 
 - (void)leftItemClick {
 
-    NSLog(@"消息");
+    MessageViewController *message = [[MessageViewController alloc] init];
+    [self.navigationController pushViewController:message animated:YES];
+    
 }
 
 - (void)backToSuper {
@@ -91,23 +95,24 @@
 
 - (void)setCustomRightBarButtonItem {
     
-    MyCustomButton *mapbutton = [MyCustomButton buttonWithType:UIButtonTypeCustom];
-    [mapbutton setFrame:CGRectMake(0, 0, 60, 44)];
+//    MyCustomButton *mapbutton = [MyCustomButton buttonWithType:UIButtonTypeCustom];
+//    [mapbutton setFrame:CGRectMake(0, 0, 60, 44)];
 //    [mapbutton setTitle:title forState:(UIControlStateNormal)];
 //    mapbutton.titleLabel.font = [UIFont systemFontOfSize:text_size_small];
 //    CGSize titleSize = [mapbutton.titleLabel sizeThatFits:CGSizeMake(60, 44)];
 //    [mapbutton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
     UIImage *image = [UIImage imageNamed:@"back"];
-    [mapbutton setImage:image forState:UIControlStateNormal];
+//    [mapbutton setImage:image forState:UIControlStateNormal];
 //    [mapbutton setMyButtonContentFrame:CGRectMake(60 - image.size.width, 10, image.size.width, 25)];
-    [mapbutton addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchDown];
-    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc]initWithCustomView:mapbutton];
-    self.navigationItem.rightBarButtonItem = rightBtn;
+//    [mapbutton addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchDown];
+//    UIBarButtonItem *rightBtn = [[UIBarButtonItem alloc]initWithCustomView:mapbutton];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:image style:UIBarButtonItemStylePlain target:self action:@selector(rightItemClick)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 - (void)rightItemClick {
 
-    TeamMessageController *mine = [[TeamMessageController alloc] init];
+    MineViewController *mine = [[MineViewController alloc] init];
     [self.navigationController pushViewController:mine animated:YES];
     
 }

@@ -9,7 +9,7 @@
 #import "BaseNaviController.h"
 #import "UIColor+StringColor.h"
 #import "UIImage+color.h"
-@interface BaseNaviController ()
+@interface BaseNaviController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -17,24 +17,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationBar];
     
+//    [navigationBar setShadowImage:image];
+//    [navigationBar setBarTintColor:[UIColor ms_colorWithHexString:@"#224FA2"]];
+
+}
+
+- (void)setNavigationBar {
+
     UINavigationBar *navigationBar = [UINavigationBar appearance];
     [navigationBar setTintColor:[UIColor whiteColor]];
     NSDictionary *attributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     [navigationBar setTitleTextAttributes:attributes];
-    [navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor ms_colorWithHexString:@"#224FA2"] withSize:CGSizeMake(self.view.bounds.size.width, 64)] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
-    [navigationBar setShadowImage:[[UIImage alloc] init]];
-//    [navigationBar setBarTintColor:[UIColor ms_colorWithHexString:@"#224FA2"]];
+    UIImage *image = [UIImage createImageWithColor:[UIColor ms_colorWithHexString:@"#224FA2"] withSize:CGSizeMake(self.view.bounds.size.width, 64)];
+    [navigationBar setBackgroundImage:image forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
     
-//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:nil action:nil];
-//    self.navigationItem.leftBarButtonItem = item;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+
+    if (self.childViewControllers > 0) {
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(popCurrentViewController)];
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    [super pushViewController:viewController animated:animated];
 }
 
+- (void)popCurrentViewController {
+    [self popViewControllerAnimated:YES];
+}
 
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    return self.childViewControllers.count > 1;
+}
 
 @end

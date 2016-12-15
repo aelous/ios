@@ -128,6 +128,8 @@
 		C9A0987F1DFCF0D900B5B6BD /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */; };
 		C9A098831DFCF21C00B5B6BD /* FollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098821DFCF21C00B5B6BD /* FollowViewController.m */; };
 		C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098881E00468F00B5B6BD /* UIImage+color.m */; };
+		C9A098A61E02E23500B5B6BD /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098A51E02E23500B5B6BD /* MessageViewController.m */; };
+		C9A098A91E02E4F800B5B6BD /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098A81E02E4F800B5B6BD /* MessageCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -410,8 +412,8 @@
 		C9A098471DFC38DA00B5B6BD /* MemberJoinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberJoinCell.xib; sourceTree = "<group>"; };
 		C9A0984E1DFC38E800B5B6BD /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableData.h; sourceTree = "<group>"; };
 		C9A0984F1DFC38E800B5B6BD /* TableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableData.m; sourceTree = "<group>"; };
-		C9A098511DFC38F600B5B6BD /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
-		C9A098521DFC38F600B5B6BD /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		C9A098511DFC38F600B5B6BD /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = ../PersonInfo/MineViewController.h; sourceTree = "<group>"; };
+		C9A098521DFC38F600B5B6BD /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = ../PersonInfo/MineViewController.m; sourceTree = "<group>"; };
 		C9A098551DFC39E900B5B6BD /* UIColor+StringColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StringColor.h"; sourceTree = "<group>"; };
 		C9A098561DFC39E900B5B6BD /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
 		C9A098571DFC39E900B5B6BD /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
@@ -441,6 +443,10 @@
 		C9A098821DFCF21C00B5B6BD /* FollowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowViewController.m; sourceTree = "<group>"; };
 		C9A098871E00468F00B5B6BD /* UIImage+color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+color.h"; sourceTree = "<group>"; };
 		C9A098881E00468F00B5B6BD /* UIImage+color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+color.m"; sourceTree = "<group>"; };
+		C9A098A41E02E23500B5B6BD /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		C9A098A51E02E23500B5B6BD /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		C9A098A71E02E4F800B5B6BD /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
+		C9A098A81E02E4F800B5B6BD /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
 		E231519DFEA2F0F26CF86AC5 /* Pods-MyBasketBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -530,6 +536,7 @@
 		04B712E91DBCBDCE006E067F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C9A098A11E02D89100B5B6BD /* unknown */,
 				04B712EA1DBCBDCE006E067F /* Base */,
 				04B712F21DBCBDCE006E067F /* Hot(热门) */,
 				C9A098801DFCF18500B5B6BD /* follow(关注) */,
@@ -546,7 +553,8 @@
 		04B712EA1DBCBDCE006E067F /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
+				C9A098A31E02E21A00B5B6BD /* message */,
+				C9A098A21E02D8A500B5B6BD /* mine */,
 				04B712EB1DBCBDCE006E067F /* BaseViewController */,
 				04B712EE1DBCBDCE006E067F /* BaseViewModel */,
 			);
@@ -641,10 +649,7 @@
 			children = (
 				C9A0987D1DFCF0D900B5B6BD /* MoreViewController.h */,
 				C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */,
-				C9A098511DFC38F600B5B6BD /* MineViewController.h */,
-				C9A098521DFC38F600B5B6BD /* MineViewController.m */,
 				C9A0985E1DFC3C1100B5B6BD /* testdata */,
-				C9A098391DFC38A200B5B6BD /* view */,
 			);
 			name = "More(更多)";
 			path = PersonInfo;
@@ -1079,6 +1084,7 @@
 				C9A0983A1DFC38B100B5B6BD /* header */,
 			);
 			name = view;
+			path = ../PersonInfo;
 			sourceTree = "<group>";
 		};
 		C9A0983A1DFC38B100B5B6BD /* header */ = {
@@ -1138,7 +1144,6 @@
 				C9A098681DFC575600B5B6BD /* TeamMessageController.m */,
 			);
 			name = TeamDetailInfo;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		C9A0986A1DFC575D00B5B6BD /* view */ = {
@@ -1173,6 +1178,35 @@
 				C9A098701DFC577A00B5B6BD /* TeamStatusCell.xib */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		C9A098A11E02D89100B5B6BD /* unknown */ = {
+			isa = PBXGroup;
+			children = (
+				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
+			);
+			name = unknown;
+			sourceTree = "<group>";
+		};
+		C9A098A21E02D8A500B5B6BD /* mine */ = {
+			isa = PBXGroup;
+			children = (
+				C9A098511DFC38F600B5B6BD /* MineViewController.h */,
+				C9A098521DFC38F600B5B6BD /* MineViewController.m */,
+				C9A098391DFC38A200B5B6BD /* view */,
+			);
+			name = mine;
+			sourceTree = "<group>";
+		};
+		C9A098A31E02E21A00B5B6BD /* message */ = {
+			isa = PBXGroup;
+			children = (
+				C9A098A41E02E23500B5B6BD /* MessageViewController.h */,
+				C9A098A51E02E23500B5B6BD /* MessageViewController.m */,
+				C9A098A71E02E4F800B5B6BD /* MessageCell.h */,
+				C9A098A81E02E4F800B5B6BD /* MessageCell.m */,
+			);
+			name = message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1449,9 +1483,11 @@
 				04B714641DBCBDCE006E067F /* LKDBHelper.m in Sources */,
 				04B714191DBCBDCE006E067F /* RegisterTextField.m in Sources */,
 				C9A098531DFC38F600B5B6BD /* MineViewController.m in Sources */,
+				C9A098A91E02E4F800B5B6BD /* MessageCell.m in Sources */,
 				04B7144D1DBCBDCE006E067F /* DataUtil.m in Sources */,
 				04B714631DBCBDCE006E067F /* LKDB+Mapping.m in Sources */,
 				04B7140B1DBCBDCE006E067F /* LeagueListModel.m in Sources */,
+				C9A098A61E02E23500B5B6BD /* MessageViewController.m in Sources */,
 				C9A098691DFC575600B5B6BD /* TeamMessageController.m in Sources */,
 				04B7147D1DBCBDCE006E067F /* UIView+SDAutoLayout.m in Sources */,
 				04B7146B1DBCBDCE006E067F /* JGProgressHUDFadeZoomAnimation.m in Sources */,

@@ -29,7 +29,7 @@
 - (void)setExtraCellLineHidden:(UITableView *)tableView;
 
 - (void)setCustomRightBarButtonItem;
-- (void)setCustomNavigationLeftBar;
+- (void)setCustomLeftBarButtonItem;
 
 - (void)showSuccessHud:(NSUInteger)section ;
 

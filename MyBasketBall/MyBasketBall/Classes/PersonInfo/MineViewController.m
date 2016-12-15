@@ -13,6 +13,7 @@
 #import "MemberBattleCell.h"
 #import "MemberJoinCell.h"
 #import "UIColor+StringColor.h"
+#import "UIImage+color.h"
 
 typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_DATA = 0,
@@ -46,14 +47,26 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = YES;
+    UIImage *image = [UIImage createImageWithColor:[UIColor clearColor] withSize:CGSizeMake(self.view.bounds.size.width, 64)];
+    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = image;
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor ms_colorWithHexString:@"#224FA2"] withSize:CGSizeMake(self.view.bounds.size.width, 64)] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+}
+
 #pragma mark - UI
 
 - (void)setupUI {
     self.view.backgroundColor = [UIColor ms_colorWithHexString:@"#224FA2"];
-    self.navigationController.navigationBar.translucent = YES;
-    UIImage *image = [[UIImage alloc] init];
-    [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = image;
+
     
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;

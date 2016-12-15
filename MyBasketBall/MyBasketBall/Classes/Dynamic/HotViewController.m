@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setCustomRightBarButtonItem];
+    [self setCustomLeftBarButtonItem];
     [self prepareUI];
 }
 
@@ -29,6 +30,7 @@
 - (void)prepareUI {
 
     self.title = @"热门";
+//    self.view.backgroundColor = [UIColor ms_colorWithHexString:@"#224FA2"];
     float width = self.view.bounds.size.width;
     float height = self.view.bounds.size.height;
     self.view.backgroundColor = [UIColor whiteColor];

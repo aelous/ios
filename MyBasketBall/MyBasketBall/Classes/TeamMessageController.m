@@ -40,7 +40,6 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     [self prepareUI];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
