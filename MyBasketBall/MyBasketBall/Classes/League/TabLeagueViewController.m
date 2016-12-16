@@ -19,12 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"比赛";
+    [self prepareUI];
 //    [self.navigationController setNavigationBarHidden:NO animated:YES];
 //    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:text_size_normal]};
-    [self.view setBackgroundColor:[UIColor whiteColor]];
-    [self setMyBlock];
-    [self initHMSegmentedCtrl];
 //    self.navSuperView = [[UIView alloc] init];
 //    self.navSuperView.backgroundColor = UIColorFromRGB(LZCOLOR_MAIN);
 //    self.navSuperView.frame = CGRectMake(0, 64, SCR_W, 44);
@@ -36,20 +33,16 @@
 */
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+- (void)prepareUI {
+
+    self.title = @"比赛";
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self setCustomLeftBarButtonItem];
+    [self setCustomRightBarButtonItem];
+    [self setMyBlock];
+    [self initHMSegmentedCtrl];
+    
 }
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (void)setMyBlock {
     __weak TabLeagueViewController *controller = self;

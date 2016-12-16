@@ -25,6 +25,11 @@
     [self setTabViewController];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = NO;
+}
+
 - (void)setTabViewController {
     
     HotViewController *hot = [[HotViewController alloc] init];

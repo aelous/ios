@@ -49,17 +49,17 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBar.translucent = YES;
     UIImage *image = [UIImage createImageWithColor:[UIColor clearColor] withSize:CGSizeMake(self.view.bounds.size.width, 64)];
     [self.navigationController.navigationBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = image;
+    [self.navigationController.navigationBar setTranslucent:YES];
     
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setBackgroundImage:[UIImage createImageWithColor:[UIColor ms_colorWithHexString:@"#224FA2"] withSize:CGSizeMake(self.view.bounds.size.width, 64)] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 #pragma mark - UI

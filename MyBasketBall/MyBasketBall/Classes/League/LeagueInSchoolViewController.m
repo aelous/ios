@@ -41,7 +41,7 @@
 }
 
 - (void)initTableView {
-    self.navigationController.navigationBar.backgroundColor = Color_Navigation_Background;
+//    self.navigationController.navigationBar.backgroundColor = Color_Navigation_Background;
     
     self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, SCR_H -NAVIGATION_HEIGHT)];
     self.myTableView.delegate = self;
@@ -49,7 +49,6 @@
     [self.myTableView setRowHeight:150];
     [self.myTableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.myTableView.backgroundColor = Color_TableView_Background;
-    
     [self.view addSubview:self.myTableView];
     
 }

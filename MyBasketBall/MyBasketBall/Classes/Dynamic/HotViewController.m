@@ -27,6 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
 - (void)prepareUI {
 
     self.title = @"热门";
@@ -41,7 +45,8 @@
     self.tableView.sectionHeaderHeight = 22;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.tableView];
+    [self.view insertSubview:self.tableView belowSubview:self.navigationController.navigationBar];
+//    [self.view addSubview:self.tableView];
     
 }
 

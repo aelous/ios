@@ -36,18 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setCustomLeftBarButtonItem];
-    self.title = @"北工大篮球联赛";
-    // Do any additional setup after loading the view.
-}
+    self.title = @"联赛信息";
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-//    [self.navigationController setNavigationBarHidden:YES];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)initUI {

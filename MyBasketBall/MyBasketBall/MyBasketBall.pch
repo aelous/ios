@@ -23,7 +23,7 @@
 #import "LogUtil.h"
 #import "GEOUtil.h"
 
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking.h"
 #import "NSObject+SBJson.h"
 #import "Constant.h"
 #import "AppDelegate.h"
