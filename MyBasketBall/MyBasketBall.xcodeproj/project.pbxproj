@@ -100,11 +100,14 @@
 		04BEE5AF1DC2310D000ABDC2 /* LZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEE5AE1DC2310D000ABDC2 /* LZProgressView.m */; };
 		04C5681A1DDF005A00F36FBC /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C568191DDF005A00F36FBC /* MatchViewController.m */; };
 		194D75C2E7EFAF2EB3921124 /* Pods_MyBasketBall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562C7F37CD302C7802DA4CE3 /* Pods_MyBasketBall.framework */; };
-		9B8E99801E03C0F3003CDDD8 /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E997F1E03C0F3003CDDD8 /* PersonalViewController.m */; };
-		9B8E99831E03C760003CDDD8 /* PersonalInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E99821E03C760003CDDD8 /* PersonalInfoCell.m */; };
+		9B8E99801E03C0F3003CDDD8 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E997F1E03C0F3003CDDD8 /* MineViewController.m */; };
+		9B8E99831E03C760003CDDD8 /* MineInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E99821E03C760003CDDD8 /* MineInfoCell.m */; };
 		9BF000C31DF6CBDC0003F3F9 /* LZGlobalUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF000C21DF6CBDC0003F3F9 /* LZGlobalUtil.m */; };
 		AD2357021DE3258000E03D14 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2356F91DE3256100E03D14 /* ReactiveObjC.framework */; };
 		AD2357031DE3259B00E03D14 /* ReactiveObjC.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = AD2356F91DE3256100E03D14 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C938D5C91E0574ED0078B5C5 /* IndividualController.m in Sources */ = {isa = PBXBuildFile; fileRef = C938D5C81E0574ED0078B5C5 /* IndividualController.m */; };
+		C938D5CC1E0575090078B5C5 /* FollowTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C938D5CB1E0575090078B5C5 /* FollowTeamController.m */; };
+		C938D5CF1E0575230078B5C5 /* FollowLeagueController.m in Sources */ = {isa = PBXBuildFile; fileRef = C938D5CE1E0575230078B5C5 /* FollowLeagueController.m */; };
 		C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */; };
 		C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098401DFC38DA00B5B6BD /* MemberDataCell.m */; };
 		C9A098491DFC38DA00B5B6BD /* MemberDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098411DFC38DA00B5B6BD /* MemberDataCell.xib */; };
@@ -113,7 +116,7 @@
 		C9A0984C1DFC38DA00B5B6BD /* MemberJoinCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098461DFC38DA00B5B6BD /* MemberJoinCell.m */; };
 		C9A0984D1DFC38DA00B5B6BD /* MemberJoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098471DFC38DA00B5B6BD /* MemberJoinCell.xib */; };
 		C9A098501DFC38E800B5B6BD /* TableData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0984F1DFC38E800B5B6BD /* TableData.m */; };
-		C9A098531DFC38F600B5B6BD /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098521DFC38F600B5B6BD /* MineViewController.m */; };
+		C9A098531DFC38F600B5B6BD /* MemberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098521DFC38F600B5B6BD /* MemberViewController.m */; };
 		C9A0985B1DFC39E900B5B6BD /* UIColor+StringColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098561DFC39E900B5B6BD /* UIColor+StringColor.m */; };
 		C9A0985C1DFC39E900B5B6BD /* UILabel+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098581DFC39E900B5B6BD /* UILabel+Custom.m */; };
 		C9A0985D1DFC39E900B5B6BD /* UIButton+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0985A1DFC39E900B5B6BD /* UIButton+Custom.m */; };
@@ -399,13 +402,19 @@
 		04C568191DDF005A00F36FBC /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		388C8BDAE46BBFC196840A29 /* Pods-MyBasketBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.debug.xcconfig"; sourceTree = "<group>"; };
 		562C7F37CD302C7802DA4CE3 /* Pods_MyBasketBall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBasketBall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9B8E997E1E03C0F3003CDDD8 /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
-		9B8E997F1E03C0F3003CDDD8 /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
-		9B8E99811E03C760003CDDD8 /* PersonalInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalInfoCell.h; sourceTree = "<group>"; };
-		9B8E99821E03C760003CDDD8 /* PersonalInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalInfoCell.m; sourceTree = "<group>"; };
+		9B8E997E1E03C0F3003CDDD8 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		9B8E997F1E03C0F3003CDDD8 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		9B8E99811E03C760003CDDD8 /* MineInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineInfoCell.h; sourceTree = "<group>"; };
+		9B8E99821E03C760003CDDD8 /* MineInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineInfoCell.m; sourceTree = "<group>"; };
 		9BF000C11DF6CBDC0003F3F9 /* LZGlobalUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZGlobalUtil.h; path = ../../LZGlobalUtil.h; sourceTree = "<group>"; };
 		9BF000C21DF6CBDC0003F3F9 /* LZGlobalUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZGlobalUtil.m; path = ../../LZGlobalUtil.m; sourceTree = "<group>"; };
 		AD2356EA1DE3256000E03D14 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = ReactiveObjC/ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
+		C938D5C71E0574ED0078B5C5 /* IndividualController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndividualController.h; sourceTree = "<group>"; };
+		C938D5C81E0574ED0078B5C5 /* IndividualController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndividualController.m; sourceTree = "<group>"; };
+		C938D5CA1E0575090078B5C5 /* FollowTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowTeamController.h; sourceTree = "<group>"; };
+		C938D5CB1E0575090078B5C5 /* FollowTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowTeamController.m; sourceTree = "<group>"; };
+		C938D5CD1E0575230078B5C5 /* FollowLeagueController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowLeagueController.h; sourceTree = "<group>"; };
+		C938D5CE1E0575230078B5C5 /* FollowLeagueController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowLeagueController.m; sourceTree = "<group>"; };
 		C9A0983B1DFC38C000B5B6BD /* MemberHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeaderView.h; sourceTree = "<group>"; };
 		C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeaderView.m; sourceTree = "<group>"; };
 		C9A0983F1DFC38DA00B5B6BD /* MemberDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataCell.h; sourceTree = "<group>"; };
@@ -419,8 +428,8 @@
 		C9A098471DFC38DA00B5B6BD /* MemberJoinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberJoinCell.xib; sourceTree = "<group>"; };
 		C9A0984E1DFC38E800B5B6BD /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableData.h; sourceTree = "<group>"; };
 		C9A0984F1DFC38E800B5B6BD /* TableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableData.m; sourceTree = "<group>"; };
-		C9A098511DFC38F600B5B6BD /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MineViewController.h; path = ../PersonInfo/MineViewController.h; sourceTree = "<group>"; };
-		C9A098521DFC38F600B5B6BD /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MineViewController.m; path = ../PersonInfo/MineViewController.m; sourceTree = "<group>"; };
+		C9A098511DFC38F600B5B6BD /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberViewController.h; path = ../PersonInfo/MemberViewController.h; sourceTree = "<group>"; };
+		C9A098521DFC38F600B5B6BD /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberViewController.m; path = ../PersonInfo/MemberViewController.m; sourceTree = "<group>"; };
 		C9A098551DFC39E900B5B6BD /* UIColor+StringColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StringColor.h"; sourceTree = "<group>"; };
 		C9A098561DFC39E900B5B6BD /* UIColor+StringColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+StringColor.m"; sourceTree = "<group>"; };
 		C9A098571DFC39E900B5B6BD /* UILabel+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Custom.h"; sourceTree = "<group>"; };
@@ -1081,10 +1090,10 @@
 		9B8E997D1E03C080003CDDD8 /* personal */ = {
 			isa = PBXGroup;
 			children = (
-				9B8E997E1E03C0F3003CDDD8 /* PersonalViewController.h */,
-				9B8E997F1E03C0F3003CDDD8 /* PersonalViewController.m */,
-				9B8E99811E03C760003CDDD8 /* PersonalInfoCell.h */,
-				9B8E99821E03C760003CDDD8 /* PersonalInfoCell.m */,
+				9B8E997E1E03C0F3003CDDD8 /* MineViewController.h */,
+				9B8E997F1E03C0F3003CDDD8 /* MineViewController.m */,
+				9B8E99811E03C760003CDDD8 /* MineInfoCell.h */,
+				9B8E99821E03C760003CDDD8 /* MineInfoCell.m */,
 			);
 			name = personal;
 			sourceTree = "<group>";
@@ -1120,6 +1129,33 @@
 				AD2357011DE3256100E03D14 /* ReactiveObjCTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C938D5BD1E0574200078B5C5 /* individual(个人) */ = {
+			isa = PBXGroup;
+			children = (
+				C938D5C71E0574ED0078B5C5 /* IndividualController.h */,
+				C938D5C81E0574ED0078B5C5 /* IndividualController.m */,
+			);
+			name = "individual(个人)";
+			sourceTree = "<group>";
+		};
+		C938D5C51E0574650078B5C5 /* team(球队) */ = {
+			isa = PBXGroup;
+			children = (
+				C938D5CA1E0575090078B5C5 /* FollowTeamController.h */,
+				C938D5CB1E0575090078B5C5 /* FollowTeamController.m */,
+			);
+			name = "team(球队)";
+			sourceTree = "<group>";
+		};
+		C938D5C61E0574850078B5C5 /* League(联赛) */ = {
+			isa = PBXGroup;
+			children = (
+				C938D5CD1E0575230078B5C5 /* FollowLeagueController.h */,
+				C938D5CE1E0575230078B5C5 /* FollowLeagueController.m */,
+			);
+			name = "League(联赛)";
 			sourceTree = "<group>";
 		};
 		C9A098391DFC38A200B5B6BD /* view */ = {
@@ -1212,6 +1248,9 @@
 			children = (
 				C9A098811DFCF21C00B5B6BD /* FollowViewController.h */,
 				C9A098821DFCF21C00B5B6BD /* FollowViewController.m */,
+				C938D5C61E0574850078B5C5 /* League(联赛) */,
+				C938D5C51E0574650078B5C5 /* team(球队) */,
+				C938D5BD1E0574200078B5C5 /* individual(个人) */,
 			);
 			name = "follow(关注)";
 			sourceTree = "<group>";
@@ -1239,8 +1278,8 @@
 		C9A098A21E02D8A500B5B6BD /* mine */ = {
 			isa = PBXGroup;
 			children = (
-				C9A098511DFC38F600B5B6BD /* MineViewController.h */,
-				C9A098521DFC38F600B5B6BD /* MineViewController.m */,
+				C9A098511DFC38F600B5B6BD /* MemberViewController.h */,
+				C9A098521DFC38F600B5B6BD /* MemberViewController.m */,
 				C9A098391DFC38A200B5B6BD /* view */,
 			);
 			name = mine;
@@ -1472,6 +1511,7 @@
 				04B714111DBCBDCE006E067F /* LoginViewController.m in Sources */,
 				04B7140E1DBCBDCE006E067F /* LeagueMineViewController.m in Sources */,
 				C9A098831DFCF21C00B5B6BD /* FollowViewController.m in Sources */,
+				C938D5CF1E0575230078B5C5 /* FollowLeagueController.m in Sources */,
 				04B7144F1DBCBDCE006E067F /* DateUtil.m in Sources */,
 				049C40181DC88651000878BB /* GetLeagueInSchoolThread.m in Sources */,
 				04B714141DBCBDCE006E067F /* RegisterPersonInfoViewController.m in Sources */,
@@ -1507,7 +1547,7 @@
 				C9A098771DFC577A00B5B6BD /* TeamStatusCell.m in Sources */,
 				C9A0986D1DFC576C00B5B6BD /* TeamHeaderView.m in Sources */,
 				C9A0984A1DFC38DA00B5B6BD /* MemberBattleCell.m in Sources */,
-				9B8E99801E03C0F3003CDDD8 /* PersonalViewController.m in Sources */,
+				9B8E99801E03C0F3003CDDD8 /* MineViewController.m in Sources */,
 				04B714581DBCBDCE006E067F /* DeleteHttpThread.m in Sources */,
 				C9A0985C1DFC39E900B5B6BD /* UILabel+Custom.m in Sources */,
 				04B714311DBCBDCE006E067F /* UIView+Extension.m in Sources */,
@@ -1533,7 +1573,7 @@
 				04B7147F1DBCBDCE006E067F /* UIViewController+BackButtonHandler.m in Sources */,
 				04B714641DBCBDCE006E067F /* LKDBHelper.m in Sources */,
 				04B714191DBCBDCE006E067F /* RegisterTextField.m in Sources */,
-				C9A098531DFC38F600B5B6BD /* MineViewController.m in Sources */,
+				C9A098531DFC38F600B5B6BD /* MemberViewController.m in Sources */,
 				C9A098A91E02E4F800B5B6BD /* MessageCell.m in Sources */,
 				04B7144D1DBCBDCE006E067F /* DataUtil.m in Sources */,
 				04B714631DBCBDCE006E067F /* LKDB+Mapping.m in Sources */,
@@ -1541,7 +1581,7 @@
 				C9A098A61E02E23500B5B6BD /* MessageViewController.m in Sources */,
 				C9A098691DFC575600B5B6BD /* TeamMessageController.m in Sources */,
 				04B7147D1DBCBDCE006E067F /* UIView+SDAutoLayout.m in Sources */,
-				9B8E99831E03C760003CDDD8 /* PersonalInfoCell.m in Sources */,
+				9B8E99831E03C760003CDDD8 /* MineInfoCell.m in Sources */,
 				04B7146B1DBCBDCE006E067F /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				04B714681DBCBDCE006E067F /* JGProgressHUD.m in Sources */,
 				04B7142D1DBCBDCE006E067F /* LZDateTimePicker.m in Sources */,
@@ -1551,11 +1591,13 @@
 				04B714741DBCBDCE006E067F /* SBJsonStreamParserAdapter.m in Sources */,
 				04B714651DBCBDCE006E067F /* LKDBUtils.m in Sources */,
 				04B714301DBCBDCE006E067F /* LLTabBarItem.m in Sources */,
+				C938D5C91E0574ED0078B5C5 /* IndividualController.m in Sources */,
 				C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */,
 				046717DA1DD07C8200DAB0EB /* LeagueMatchTableViewCell.m in Sources */,
 				04B714091DBCBDCE006E067F /* BaseViewModel.m in Sources */,
 				04C5681A1DDF005A00F36FBC /* MatchViewController.m in Sources */,
 				04B714671DBCBDCE006E067F /* NSObject+LKModel.m in Sources */,
+				C938D5CC1E0575090078B5C5 /* FollowTeamController.m in Sources */,
 				04B7147A1DBCBDCE006E067F /* SBJsonUTF8Stream.m in Sources */,
 				04B714391DBCBDCE006E067F /* PostLoginThread.m in Sources */,
 				04B714761DBCBDCE006E067F /* SBJsonStreamWriter.m in Sources */,

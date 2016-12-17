@@ -14,7 +14,6 @@
 #import "LeagueBetweenSchoolViewController.h"
 @interface TabLeagueViewController : BaseViewController
 
-
 @property(nonatomic, strong)UIViewController    *currentViewController;
 @property(nonatomic, strong)HMSegmentedControl  *HMSegmentedCtrl;
 @property(nonatomic, strong)UIView              *containView;

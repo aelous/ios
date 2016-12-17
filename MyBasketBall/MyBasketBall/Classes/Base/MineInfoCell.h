@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PersonalInfoCell : UITableViewCell
+@interface MineInfoCell : UITableViewCell
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *value;
 
-+ (PersonalInfoCell *)cellWithTableView:(UITableView *)tableView;
++ (MineInfoCell *)cellWithTableView:(UITableView *)tableView;
 
 @end

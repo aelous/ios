@@ -12,7 +12,7 @@
 {
     IndexChangeBlock myIndexBlock;
 }
-@property (nonatomic, strong) UIView *navSuperView;
+//@property (nonatomic, strong) UIView *navSuperView;
 @end
 
 @implementation TabLeagueViewController
@@ -74,7 +74,7 @@
 
 - (void)initHMSegmentedCtrl
 {
-    NSArray* items=[NSArray arrayWithObjects:@"校内联赛", @"校际联赛", @"我的", nil];
+    NSArray* items=[NSArray arrayWithObjects:@"校内联赛", @"校际联赛", @"约战", nil];
     _HMSegmentedCtrl = [[HMSegmentedControl alloc]initWithSectionTitles:items];
     _HMSegmentedCtrl.frame = CGRectMake(0, 0, SCR_W, SEGMENT_HEIGHT);
     //    [_HMSegmentedCtrl addBottomLine];
@@ -86,9 +86,9 @@
     _HMSegmentedCtrl.selectionIndicatorColor = UIColorFromRGB(LZCOLOR_MAIN);
     _HMSegmentedCtrl.selectionIndicatorHeight = 3;
     _HMSegmentedCtrl.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
-    _HMSegmentedCtrl.selectionStyle = HMSegmentedControlSelectionStyleTextWidthStripe;
-    _HMSegmentedCtrl.verticalDividerEnabled = YES;
-    _HMSegmentedCtrl.verticalDividerColor = UIColorFromRGB(LZCOLOR_MAIN);
+    _HMSegmentedCtrl.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
+//    _HMSegmentedCtrl.verticalDividerEnabled = NO;
+//    _HMSegmentedCtrl.verticalDividerColor = UIColorFromRGB(LZCOLOR_MAIN);
     
     _containView = [[UIView alloc]initWithFrame:CGRectMake(0, 30, SCR_W, SCR_H-94-49)];
     [self.view addSubview:_containView];

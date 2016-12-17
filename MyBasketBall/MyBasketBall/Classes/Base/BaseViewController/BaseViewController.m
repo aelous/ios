@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 #import "UIView+Toast.h"
-#import "PersonalViewController.h"
+#import "MineViewController.h"
 #import "MessageViewController.h"
 
 @interface BaseViewController (){
@@ -112,7 +112,7 @@
 
 - (void)rightItemClick {
 
-    PersonalViewController *persion = [[PersonalViewController alloc] init];
+    MineViewController *persion = [[MineViewController alloc] init];
     [self.navigationController pushViewController:persion animated:YES];
     
 }

@@ -8,6 +8,6 @@
 
 #import "BaseViewController.h"
 
-@interface MineViewController : BaseViewController
+@interface MemberViewController : BaseViewController
 
 @end

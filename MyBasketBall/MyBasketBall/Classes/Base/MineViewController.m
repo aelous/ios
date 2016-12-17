@@ -6,19 +6,19 @@
 //  Copyright © 2016年 lizhe. All rights reserved.
 //
 
-#import "PersonalViewController.h"
-#import "PersonalInfoCell.h"
+#import "MineViewController.h"
+#import "MineInfoCell.h"
 #import "SDAutoLayout.h"
 #import "UIButton+Custom.h"
 
-@interface PersonalViewController ()
+@interface MineViewController ()
 
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) UIButton *save;
 
 @end
 
-@implementation PersonalViewController
+@implementation MineViewController
 
 #pragma mark - lifecycle
 
@@ -86,7 +86,7 @@
         return cell;
         
     } else {
-        PersonalInfoCell *cell = [PersonalInfoCell cellWithTableView:tableView];
+        MineInfoCell *cell = [MineInfoCell cellWithTableView:tableView];
         cell.title = titleArr[indexPath.row];
         return cell;
     }

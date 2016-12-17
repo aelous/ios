@@ -6,7 +6,7 @@
 //  Copyright © 2016年 basketball. All rights reserved.
 //
 
-#import "MineViewController.h"
+#import "MemberViewController.h"
 #import "MemberHeaderView.h"
 #import "TableData.h"
 #import "MemberDataCell.h"
@@ -22,7 +22,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_MANAGE = 3,
 };
 
-@interface MineViewController ()<MemberHeaderViewButtonSelectedDelegate>
+@interface MemberViewController ()<MemberHeaderViewButtonSelectedDelegate>
 
 @property (nonatomic, assign) int selectedType;
 
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 @end
 
-@implementation MineViewController
+@implementation MemberViewController
 
 #pragma mark - lifecycle
 

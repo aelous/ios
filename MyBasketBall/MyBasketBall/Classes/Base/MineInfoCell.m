@@ -6,10 +6,10 @@
 //  Copyright © 2016年 lizhe. All rights reserved.
 //
 
-#import "PersonalInfoCell.h"
+#import "MineInfoCell.h"
 #import "SDAutoLayout.h"
 
-@interface PersonalInfoCell()
+@interface MineInfoCell()
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *valueLabel;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation PersonalInfoCell
+@implementation MineInfoCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -30,12 +30,12 @@
     // Configure the view for the selected state
 }
 
-+ (PersonalInfoCell *)cellWithTableView:(UITableView *)tableView {
++ (MineInfoCell *)cellWithTableView:(UITableView *)tableView {
 
     NSString *cellId = @"personal_cell";
-    PersonalInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    MineInfoCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[PersonalInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[MineInfoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     return cell;
 }
