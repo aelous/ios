@@ -7,8 +7,11 @@
 //
 
 #import "MoreViewController.h"
+#import "MoreTableCell.h"
 
 @interface MoreViewController ()
+
+@property (nonatomic, strong) NSArray *titleArray;
 
 @end
 
@@ -27,7 +30,33 @@
 - (void)prepareUI {
 
     self.title = @"更多";
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self setCustomRightBarButtonItem];
+    [self setCustomLeftBarButtonItem];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, SCR_H-64) style:UITableViewStylePlain];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    self.tableView.rowHeight = 40;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.view addSubview:self.tableView];
+    self.titleArray = [NSArray arrayWithObjects:@"球队",@"球员",@"联赛",@"排行", nil];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.titleArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    MoreTableCell *cell = [MoreTableCell cellWithTableView:tableView];
+    cell.title = self.titleArray[indexPath.row];
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

@@ -132,6 +132,7 @@
 		C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098881E00468F00B5B6BD /* UIImage+color.m */; };
 		C9A098A61E02E23500B5B6BD /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098A51E02E23500B5B6BD /* MessageViewController.m */; };
 		C9A098A91E02E4F800B5B6BD /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098A81E02E4F800B5B6BD /* MessageCell.m */; };
+		C9A098B61E05267100B5B6BD /* MoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098B51E05267100B5B6BD /* MoreTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -453,6 +454,8 @@
 		C9A098A51E02E23500B5B6BD /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		C9A098A71E02E4F800B5B6BD /* MessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCell.h; sourceTree = "<group>"; };
 		C9A098A81E02E4F800B5B6BD /* MessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCell.m; sourceTree = "<group>"; };
+		C9A098B41E05267100B5B6BD /* MoreTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreTableCell.h; sourceTree = "<group>"; };
+		C9A098B51E05267100B5B6BD /* MoreTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableCell.m; sourceTree = "<group>"; };
 		E231519DFEA2F0F26CF86AC5 /* Pods-MyBasketBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -640,7 +643,8 @@
 			children = (
 				C9A0987D1DFCF0D900B5B6BD /* MoreViewController.h */,
 				C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */,
-				C9A0985E1DFC3C1100B5B6BD /* testdata */,
+				C9A098B41E05267100B5B6BD /* MoreTableCell.h */,
+				C9A098B51E05267100B5B6BD /* MoreTableCell.m */,
 			);
 			name = "More(更多)";
 			path = PersonInfo;
@@ -1175,6 +1179,7 @@
 				C9A0984F1DFC38E800B5B6BD /* TableData.m */,
 			);
 			name = testdata;
+			path = PersonInfo;
 			sourceTree = "<group>";
 		};
 		C9A098661DFC573800B5B6BD /* TeamDetailInfo */ = {
@@ -1224,6 +1229,7 @@
 		C9A098A11E02D89100B5B6BD /* unknown */ = {
 			isa = PBXGroup;
 			children = (
+				C9A0985E1DFC3C1100B5B6BD /* testdata */,
 				C9A098A21E02D8A500B5B6BD /* mine */,
 				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
 			);
@@ -1516,6 +1522,7 @@
 				04B714711DBCBDCE006E067F /* SBJsonParser.m in Sources */,
 				04B714161DBCBDCE006E067F /* RegisterViewController.m in Sources */,
 				C9A0987F1DFCF0D900B5B6BD /* MoreViewController.m in Sources */,
+				C9A098B61E05267100B5B6BD /* MoreTableCell.m in Sources */,
 				04B714791DBCBDCE006E067F /* SBJsonTokeniser.m in Sources */,
 				046717E01DD09A1000DAB0EB /* MatchListModel.m in Sources */,
 				04B714771DBCBDCE006E067F /* SBJsonStreamWriterAccumulator.m in Sources */,
