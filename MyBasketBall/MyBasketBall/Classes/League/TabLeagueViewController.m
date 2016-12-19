@@ -7,12 +7,18 @@
 //
 
 #import "TabLeagueViewController.h"
+#import "UIButton+Custom.h"
 
 @interface TabLeagueViewController ()
 {
     IndexChangeBlock myIndexBlock;
 }
 //@property (nonatomic, strong) UIView *navSuperView;
+@property (nonatomic, strong) UIButton *create;
+@property (nonatomic, strong) UIButton *createLeague;
+@property (nonatomic, strong) UIButton *createTeam;
+@property (nonatomic, strong) UIButton *date;
+
 @end
 
 @implementation TabLeagueViewController
@@ -20,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self prepareUI];
-//    [self.navigationController setNavigationBarHidden:NO animated:YES];
 //    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName: [UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:text_size_normal]};
 //    self.navSuperView = [[UIView alloc] init];
 //    self.navSuperView.backgroundColor = UIColorFromRGB(LZCOLOR_MAIN);
@@ -36,11 +41,13 @@
 - (void)prepareUI {
 
     self.title = @"比赛";
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    self.view.frame = CGRectMake(0, 64, SCR_W, SCR_H-TABBAR_HEIGHT-NAVIGATION_HEIGHT);
+    [self.view setBackgroundColor:[UIColor redColor]];
     [self setCustomLeftBarButtonItem];
     [self setCustomRightBarButtonItem];
     [self setMyBlock];
     [self initHMSegmentedCtrl];
+    [self setCreateButtons];
     
 }
 
@@ -104,6 +111,45 @@
     [self.containView addSubview:self.viewCtrlInSchool.view];
     _currentViewController = self.viewCtrlInSchool;
     [_HMSegmentedCtrl setIndexChangeBlock:myIndexBlock];
+    
+}
+
+- (void)setCreateButtons {
+
+    float height = self.view.bounds.size.height;
+    self.create = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.create setImage:[UIImage imageNamed:@"touxiang"] forState:UIControlStateNormal];
+    [self.create setImage:[UIImage imageNamed:@"icon6"] forState:UIControlStateSelected];
+    self.create.frame = CGRectMake(15, height-55, 35, 35);
+    [self.create addTarget:self action:@selector(createButtonClick:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:self.create];
+    [self.view bringSubviewToFront:self.create];
+    
+    self.createLeague = [UIButton colorButtonWithTitle:@"创建联赛" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#4A90E2"];
+    self.createLeague.frame = CGRectMake(20, height-118, 43, 43);
+    [self.view addSubview:self.createLeague];
+    [self.view bringSubviewToFront:self.createLeague];
+    self.createLeague.hidden = YES;
+
+    self.createTeam = [UIButton colorButtonWithTitle:@"创建球队" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#F76672"];
+    self.createTeam.frame = CGRectMake(73, height-100, 43, 43);
+    [self.view addSubview:self.createTeam];
+    [self.view bringSubviewToFront:self.createTeam];
+    self.createTeam.hidden = YES;
+
+    self.date = [UIButton colorButtonWithTitle:@"约战" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#3AB89C"];
+    self.date.frame = CGRectMake(63, height-48, 43, 43);
+    [self.view addSubview:self.date];
+    [self.view bringSubviewToFront:self.date];
+    self.date.hidden = YES;
+
+}
+
+- (void)createButtonClick:(UIButton *)sender {
+
+    self.createLeague.hidden = !self.createLeague.hidden;
+    self.createTeam.hidden = !self.createTeam.hidden;
+    self.date.hidden = !self.date.hidden;
     
 }
 

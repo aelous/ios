@@ -16,6 +16,7 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setTitle:title forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont systemFontOfSize:size]];
+    button.titleLabel.numberOfLines = 0;
     [button setTitleColor:[UIColor ms_colorWithHexString:titleColor] forState:UIControlStateNormal];
     [button setBackgroundColor:[UIColor whiteColor]];
     return button;
@@ -28,6 +29,7 @@
     [button setBackgroundColor:[UIColor ms_colorWithHexString:backColor]];
     [button setTitleColor:[UIColor ms_colorWithHexString:titleColor] forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont systemFontOfSize:size]];
+    button.titleLabel.numberOfLines = 0;
     return button;
 }
 
