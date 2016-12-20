@@ -41,28 +41,27 @@
 
 - (void)prepareUI {
 
+    float height = self.view.bounds.size.height-64;
+    
     self.title = @"个人信息";
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, SCR_H-64-40) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, height-40) style:UITableViewStyleGrouped];
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    self.tableView.backgroundColor = [UIColor grayColor];
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
     self.tableView.rowHeight = 40;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.sectionFooterHeight = 0;
     self.tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, 0.01f)];
     [self.view addSubview:self.tableView];
     
-    [self setSaveButton];
-}
-
-- (void)setSaveButton {
-
     UIButton *save = [UIButton colorButtonWithTitle:@"确认保存" fontSize:18 titleColor:@"#FFFFFF" backgroundColor:@"#f76672"];
-    save.frame = CGRectMake(0, SCR_H-40, SCR_W, 40);
+    save.frame = CGRectMake(0, height-40, SCR_W, 40);
     [save addTarget:self action:@selector(savePersonalInfo) forControlEvents:UIControlEventTouchUpInside];
     self.save = save;
-    [self.tableView addSubview:self.save];
+    [self.view addSubview:self.save];
 }
+
+#pragma mark - tableview datasource and delegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 5;
@@ -104,12 +103,9 @@
     portrait.layer.masksToBounds = YES;
     [cell.contentView addSubview:portrait];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.titleLabel.text = @"上传";
-    button.titleLabel.textColor = [UIColor grayColor];
-    button.backgroundColor = [UIColor redColor];
-    [button addTarget:self action:@selector(upLoadPortrait) forControlEvents:UIControlEventTouchUpInside];
-    [cell.contentView addSubview:button];
+    UIButton *upLoad = [UIButton textButtonWithTitle:@"上传" fontSize:14 titleColor:@"000000"];
+    [upLoad addTarget:self action:@selector(upLoadPortrait) forControlEvents:UIControlEventTouchUpInside];
+    [cell.contentView addSubview:upLoad];
     
     UIView *line = [[UIView alloc] init];
     line.backgroundColor = [UIColor grayColor];
@@ -120,13 +116,13 @@
     .widthIs(80)
     .heightIs(20);
     
-    button.sd_layout.centerYEqualToView(cell.contentView)
+    upLoad.sd_layout.centerYEqualToView(cell.contentView)
     .rightSpaceToView(cell.contentView, 20)
     .widthIs(40)
     .heightIs(20);
     
     portrait.sd_layout.centerYEqualToView(cell.contentView)
-    .rightSpaceToView(button, 20)
+    .rightSpaceToView(upLoad, 20)
     .heightIs(25)
     .widthIs(25);
     
@@ -138,6 +134,12 @@
     return cell;
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - private
      
 - (void)upLoadPortrait {
 //上传头像

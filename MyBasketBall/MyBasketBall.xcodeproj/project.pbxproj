@@ -562,6 +562,7 @@
 		04B712EA1DBCBDCE006E067F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C9A098A21E02D8A500B5B6BD /* mine */,
 				9B8E997D1E03C080003CDDD8 /* personal */,
 				C9A098A31E02E21A00B5B6BD /* message */,
 				04B712EB1DBCBDCE006E067F /* BaseViewController */,
@@ -1269,7 +1270,6 @@
 			isa = PBXGroup;
 			children = (
 				C9A0985E1DFC3C1100B5B6BD /* testdata */,
-				C9A098A21E02D8A500B5B6BD /* mine */,
 				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
 			);
 			name = unknown;
@@ -1283,7 +1283,6 @@
 				C9A098391DFC38A200B5B6BD /* view */,
 			);
 			name = mine;
-			path = Base;
 			sourceTree = "<group>";
 		};
 		C9A098A31E02E21A00B5B6BD /* message */ = {

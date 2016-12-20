@@ -118,6 +118,8 @@
 
     float height = self.view.bounds.size.height;
     self.create = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.create.layer.cornerRadius = 17.5;
+    self.create.layer.masksToBounds = YES;
     [self.create setImage:[UIImage imageNamed:@"touxiang"] forState:UIControlStateNormal];
     [self.create setImage:[UIImage imageNamed:@"icon6"] forState:UIControlStateSelected];
     self.create.frame = CGRectMake(15, height-55, 35, 35);
@@ -126,18 +128,25 @@
     [self.view bringSubviewToFront:self.create];
     
     self.createLeague = [UIButton colorButtonWithTitle:@"创建联赛" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#4A90E2"];
+    self.createLeague.layer.cornerRadius = 21.5;
+    self.createLeague.layer.masksToBounds = YES;
     self.createLeague.frame = CGRectMake(20, height-118, 43, 43);
     [self.view addSubview:self.createLeague];
     [self.view bringSubviewToFront:self.createLeague];
     self.createLeague.hidden = YES;
 
     self.createTeam = [UIButton colorButtonWithTitle:@"创建球队" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#F76672"];
+    self.createTeam.layer.cornerRadius = 21.5;
+    self.createTeam.layer.masksToBounds = YES;
+    [self.createTeam.titleLabel setTextAlignment:NSTextAlignmentCenter];
     self.createTeam.frame = CGRectMake(73, height-100, 43, 43);
     [self.view addSubview:self.createTeam];
     [self.view bringSubviewToFront:self.createTeam];
     self.createTeam.hidden = YES;
 
     self.date = [UIButton colorButtonWithTitle:@"约战" fontSize:12.0 titleColor:@"#FFFFFF" backgroundColor:@"#3AB89C"];
+    self.date.layer.cornerRadius = 21.5;
+    self.date.layer.masksToBounds = YES;
     self.date.frame = CGRectMake(63, height-48, 43, 43);
     [self.view addSubview:self.date];
     [self.view bringSubviewToFront:self.date];
@@ -152,6 +161,8 @@
     self.date.hidden = !self.date.hidden;
     
 }
+
+
 
 
 @end

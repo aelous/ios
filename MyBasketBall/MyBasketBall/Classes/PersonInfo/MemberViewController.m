@@ -14,6 +14,7 @@
 #import "MemberJoinCell.h"
 #import "UIColor+StringColor.h"
 #import "UIImage+color.h"
+#import "MineViewController.h"
 
 typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_DATA = 0,
@@ -66,10 +67,13 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 - (void)setupUI {
     self.view.backgroundColor = [UIColor ms_colorWithHexString:@"#224FA2"];
-
     
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarButtonClick)];
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
     MemberHeaderView *headerView = [[MemberHeaderView alloc] initWithFrame:CGRectMake(0, 20, self.view.bounds.size.width, 186)];
     headerView.delegate = self;
     [self.view addSubview:headerView];
@@ -83,6 +87,13 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     
     self.selectedType = TYPE_DATA;
     self.testHeight = 230;
+}
+
+- (void)rightBarButtonClick {
+
+    MineViewController *setInfo = [[MineViewController alloc] init];
+    [self.navigationController pushViewController:setInfo animated:YES];
+    
 }
 
 - (void)headerViewButtonSelectedAtIndex:(int)index {
