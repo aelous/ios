@@ -11,10 +11,12 @@
 #import "SDAutoLayout.h"
 #import "UIButton+Custom.h"
 
-@interface MineViewController ()
+@interface MineViewController ()<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) NSArray *titleArray;
 @property (nonatomic, strong) UIButton *save;
+@property (nonatomic, strong) UIImagePickerController *imagePickerController;
+@property (nonatomic, strong) UIImageView *portrait;
 
 @end
 
@@ -98,10 +100,10 @@
     UILabel *title = [UILabel labelWithTitle:@"头像" size:14 colorString:@"#000000"];
     [cell.contentView addSubview:title];
     
-    UIImageView *portrait = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"touxiang"]];
-    portrait.layer.cornerRadius = 12.5;
-    portrait.layer.masksToBounds = YES;
-    [cell.contentView addSubview:portrait];
+    self.portrait = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"touxiang"]];
+    self.portrait.layer.cornerRadius = 12.5;
+    self.portrait.layer.masksToBounds = YES;
+    [cell.contentView addSubview:self.portrait];
     
     UIButton *upLoad = [UIButton textButtonWithTitle:@"上传" fontSize:14 titleColor:@"000000"];
     [upLoad addTarget:self action:@selector(upLoadPortrait) forControlEvents:UIControlEventTouchUpInside];
@@ -121,7 +123,7 @@
     .widthIs(40)
     .heightIs(20);
     
-    portrait.sd_layout.centerYEqualToView(cell.contentView)
+    self.portrait.sd_layout.centerYEqualToView(cell.contentView)
     .rightSpaceToView(upLoad, 20)
     .heightIs(25)
     .widthIs(25);
@@ -144,12 +146,57 @@
 - (void)upLoadPortrait {
 //上传头像
     NSLog(@"upload portrait");
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"请选择" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *cancle = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert addAction:cancle];
+    
+    __weak typeof(self) weakSelf = self;
+    UIAlertAction *album = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [weakSelf setPortraitWithSource:UIImagePickerControllerSourceTypePhotoLibrary];
+    }];
+    [alert addAction:album];
+    
+    UIAlertAction *photo = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //调用相机
+        [weakSelf setPortraitWithSource:UIImagePickerControllerSourceTypeCamera];
+    }];
+    [alert addAction:photo];
+    [self presentViewController:alert  animated:YES completion:nil];
 
+}
+
+- (void)setPortraitWithSource:(UIImagePickerControllerSourceType)source {
+    
+    self.imagePickerController = [UIImagePickerController new];
+    self.imagePickerController.allowsEditing = YES;
+    self.imagePickerController.sourceType = source;
+    self.imagePickerController.delegate = self;
+    [self presentViewController:self.imagePickerController animated:YES completion:nil];
+    
 }
 
 - (void)savePersonalInfo {
 
     NSLog(@"保存成功");
 }
+
+#pragma mark - UIImagePickerControllerDelegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
+
+    // 相册选择完或者拍照完后返回的相片
+    UIImage *image  = [info objectForKey:UIImagePickerControllerEditedImage];
+    [self.portrait setImage:image];
+
+    [self dismissViewControllerAnimated:YES completion:^{
+        //上传头像到服务器
+        NSLog(@"头像上传服务器。。。");
+    }];
+    // 上传完相片清除内存
+    image = nil;
+
+}
+
+
 
 @end
