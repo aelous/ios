@@ -50,7 +50,7 @@
         [self.contentView addSubview:self.titleLabel];
         
         self.line = [[UIView alloc] init];
-        self.line.backgroundColor = [UIColor darkGrayColor];
+        self.line.backgroundColor = [UIColor ms_colorWithHexString:@"#979797"];
         [self.contentView addSubview:self.line];
         
     }
@@ -73,7 +73,7 @@
     self.line.translatesAutoresizingMaskIntoConstraints = false;
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[line]-0-|" options:0 metrics:nil views:@{@"line":self.line}]];
     
-    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.line attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:1]];
+    [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.line attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0.5]];
     [self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.line attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.contentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
     
 }

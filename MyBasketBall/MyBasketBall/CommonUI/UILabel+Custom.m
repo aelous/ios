@@ -23,4 +23,15 @@
     
 }
 
++ (UILabel *)labelWithSize:(float)size color:(NSString *)color {
+
+    UILabel *label = [[UILabel alloc] init];
+    label.textColor = [UIColor ms_colorWithHexString:color];
+    label.font = [UIFont systemFontOfSize:size];
+    label.numberOfLines = 0;
+    [label sizeToFit];
+    return label;
+    
+}
+
 @end

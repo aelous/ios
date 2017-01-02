@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FollowLeagueController : UIViewController
+@interface FollowLeagueController : BaseViewController
 
 @end

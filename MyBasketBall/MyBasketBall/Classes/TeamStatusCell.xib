@@ -58,6 +58,9 @@
                         <state key="normal" title="关注">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="cornerRadius" value="4"/>
+                        </userDefinedRuntimeAttributes>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DlZ-rc-Qoe">
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -82,12 +85,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="DlZ-rc-Qoe" firstAttribute="centerY" secondItem="bAV-ER-oGD" secondAttribute="centerY" id="1Nb-SV-50k"/>
+                    <constraint firstItem="mRg-ga-4va" firstAttribute="leading" secondItem="HUi-h4-Pbw" secondAttribute="trailing" constant="10" id="7DR-aJ-sLX"/>
                     <constraint firstItem="HUi-h4-Pbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="26" id="8rd-e1-aFR"/>
                     <constraint firstItem="FQz-B7-EjU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="AWe-ri-JZq"/>
                     <constraint firstItem="DlZ-rc-Qoe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="30" id="Ac3-SX-Paw"/>
                     <constraint firstItem="We0-g2-4kR" firstAttribute="centerX" secondItem="hXi-Dg-KVe" secondAttribute="centerX" id="Aox-Rn-kuc"/>
                     <constraint firstItem="We0-g2-4kR" firstAttribute="top" secondItem="hXi-Dg-KVe" secondAttribute="bottom" constant="15" id="EHf-MG-Jfc"/>
-                    <constraint firstItem="mRg-ga-4va" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-80" id="FZp-pk-TGa"/>
                     <constraint firstItem="tlJ-iR-TFg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="HQa-3c-uQY"/>
                     <constraint firstItem="9YP-fd-jlV" firstAttribute="top" secondItem="HUi-h4-Pbw" secondAttribute="bottom" constant="15" id="JMX-4B-kgU"/>
                     <constraint firstItem="hXi-Dg-KVe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="PrS-ju-BZj"/>
@@ -98,8 +101,8 @@
                     <constraint firstItem="bAV-ER-oGD" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-30" id="i9S-gE-NUE"/>
                     <constraint firstItem="HUi-h4-Pbw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="nIB-FD-UrR"/>
                     <constraint firstItem="mRg-ga-4va" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="rWf-Ta-bcI"/>
+                    <constraint firstItem="hXi-Dg-KVe" firstAttribute="leading" secondItem="tlJ-iR-TFg" secondAttribute="trailing" constant="10" id="wau-nA-dJX"/>
                     <constraint firstItem="FQz-B7-EjU" firstAttribute="top" secondItem="UX0-t0-Is7" secondAttribute="bottom" constant="12" id="x1b-QK-Jzb"/>
-                    <constraint firstItem="tlJ-iR-TFg" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="80" id="y6C-MG-9Ct"/>
                     <constraint firstItem="UX0-t0-Is7" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zqB-hk-vfL"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>

@@ -174,6 +174,7 @@
     [thread requireonPrev:^{
         ;
     } success:^(NSDictionary *dic) {
+        NSLog(@"联赛详细信息");
         LeagueDetailsViewController *VC = [[LeagueDetailsViewController alloc] init];
         [VC settingData];
         [self.navigationController pushViewController:VC animated:YES];

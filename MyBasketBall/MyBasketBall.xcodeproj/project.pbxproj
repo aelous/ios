@@ -137,6 +137,9 @@
 		C9A098A91E02E4F800B5B6BD /* MessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098A81E02E4F800B5B6BD /* MessageCell.m */; };
 		C9A098B61E05267100B5B6BD /* MoreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098B51E05267100B5B6BD /* MoreTableCell.m */; };
 		C9D45E101E0ABEFC00B91ABE /* CreateTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D45E0F1E0ABEFC00B91ABE /* CreateTeamController.m */; };
+		C9D45E1D1E116E4900B91ABE /* MoreSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D45E1C1E116E4900B91ABE /* MoreSearchController.m */; };
+		C9D45E201E17F9C000B91ABE /* SearchLeagueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D45E1F1E17F9C000B91ABE /* SearchLeagueCell.m */; };
+		C9D45E231E18E7E200B91ABE /* SearchMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D45E221E18E7E200B91ABE /* SearchMemberCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -468,6 +471,12 @@
 		C9A098B51E05267100B5B6BD /* MoreTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreTableCell.m; sourceTree = "<group>"; };
 		C9D45E0E1E0ABEFC00B91ABE /* CreateTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateTeamController.h; sourceTree = "<group>"; };
 		C9D45E0F1E0ABEFC00B91ABE /* CreateTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateTeamController.m; sourceTree = "<group>"; };
+		C9D45E1B1E116E4900B91ABE /* MoreSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreSearchController.h; sourceTree = "<group>"; };
+		C9D45E1C1E116E4900B91ABE /* MoreSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreSearchController.m; sourceTree = "<group>"; };
+		C9D45E1E1E17F9C000B91ABE /* SearchLeagueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchLeagueCell.h; sourceTree = "<group>"; };
+		C9D45E1F1E17F9C000B91ABE /* SearchLeagueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchLeagueCell.m; sourceTree = "<group>"; };
+		C9D45E211E18E7E200B91ABE /* SearchMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMemberCell.h; sourceTree = "<group>"; };
+		C9D45E221E18E7E200B91ABE /* SearchMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMemberCell.m; sourceTree = "<group>"; };
 		E231519DFEA2F0F26CF86AC5 /* Pods-MyBasketBall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -648,6 +657,7 @@
 				C9A0987E1DFCF0D900B5B6BD /* MoreViewController.m */,
 				C9A098B41E05267100B5B6BD /* MoreTableCell.h */,
 				C9A098B51E05267100B5B6BD /* MoreTableCell.m */,
+				C9D45E131E116DB300B91ABE /* subVC */,
 			);
 			name = "More(更多)";
 			path = PersonInfo;
@@ -1309,6 +1319,19 @@
 			name = subModule;
 			sourceTree = "<group>";
 		};
+		C9D45E131E116DB300B91ABE /* subVC */ = {
+			isa = PBXGroup;
+			children = (
+				C9D45E1B1E116E4900B91ABE /* MoreSearchController.h */,
+				C9D45E1C1E116E4900B91ABE /* MoreSearchController.m */,
+				C9D45E1E1E17F9C000B91ABE /* SearchLeagueCell.h */,
+				C9D45E1F1E17F9C000B91ABE /* SearchLeagueCell.m */,
+				C9D45E211E18E7E200B91ABE /* SearchMemberCell.h */,
+				C9D45E221E18E7E200B91ABE /* SearchMemberCell.m */,
+			);
+			name = subVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1508,6 +1531,7 @@
 				04B7141A1DBCBDCE006E067F /* RegisterViewModel.m in Sources */,
 				04B7142F1DBCBDCE006E067F /* LLTabBar.m in Sources */,
 				04B7146A1DBCBDCE006E067F /* JGProgressHUDFadeAnimation.m in Sources */,
+				C9D45E201E17F9C000B91ABE /* SearchLeagueCell.m in Sources */,
 				04B7145B1DBCBDCE006E067F /* SimpleGUIFactory.m in Sources */,
 				04B7143A1DBCBDCE006E067F /* PostPictureThread.m in Sources */,
 				04B714081DBCBDCE006E067F /* BaseViewController.m in Sources */,
@@ -1551,6 +1575,7 @@
 				04B712D71DBCBD35006E067F /* AppDelegate.m in Sources */,
 				04B714751DBCBDCE006E067F /* SBJsonStreamParserState.m in Sources */,
 				04B7145E1DBCBDCE006E067F /* PostHttpThread.m in Sources */,
+				C9D45E1D1E116E4900B91ABE /* MoreSearchController.m in Sources */,
 				04B7140F1DBCBDCE006E067F /* TabLeagueViewController.m in Sources */,
 				046717DD1DD08F8E00DAB0EB /* GetLeagueDetailsThread.m in Sources */,
 				04B714151DBCBDCE006E067F /* RegisterResetPasswordViewController.m in Sources */,
@@ -1571,6 +1596,7 @@
 				04B7142E1DBCBDCE006E067F /* LZPickerNum.m in Sources */,
 				046717D61DD07C3B00DAB0EB /* LeagueDetailsViewController.m in Sources */,
 				04B7145D1DBCBDCE006E067F /* HttpBaseResponse.m in Sources */,
+				C9D45E231E18E7E200B91ABE /* SearchMemberCell.m in Sources */,
 				04B714711DBCBDCE006E067F /* SBJsonParser.m in Sources */,
 				04B714161DBCBDCE006E067F /* RegisterViewController.m in Sources */,
 				C9A0987F1DFCF0D900B5B6BD /* MoreViewController.m in Sources */,

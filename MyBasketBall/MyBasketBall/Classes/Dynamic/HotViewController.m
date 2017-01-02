@@ -43,8 +43,8 @@
     self.tableView.delegate = self;
     self.tableView.rowHeight = 90;
     self.tableView.sectionHeaderHeight = 22;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view insertSubview:self.tableView belowSubview:self.navigationController.navigationBar];
 //    [self.view addSubview:self.tableView];
     
@@ -62,7 +62,12 @@
 
     TeamStatusCell *cell = [TeamStatusCell cellWithTableView:tableView];
     return cell;
-    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    NSLog(@"对战界面");
+
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
