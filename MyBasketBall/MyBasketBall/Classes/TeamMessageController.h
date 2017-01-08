@@ -10,4 +10,6 @@
 
 @interface TeamMessageController : BaseViewController
 
+@property (nonatomic, copy) void (^leftItemBlock)(void);
+
 @end

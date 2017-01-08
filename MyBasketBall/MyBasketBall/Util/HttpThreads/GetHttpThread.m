@@ -11,19 +11,15 @@
 
 @implementation GetHttpThread
 
-
-
 -(void)setUrl:(NSString *)url andTimeout:(NSInteger) timeout{
-
     self.url=url;
     self.timeout=timeout;
 }
 
 -(void)require
 {
-    
     [self onPrev];
-//    self.task=nil;
+    //self.task=nil;
     //检测网络
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
          [[AFNetworkReachabilityManager sharedManager] stopMonitoring];
@@ -36,13 +32,9 @@
                 [self http];
                 break;
         }
-
     }];
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
-
-
-
 
 -(void)cancel{
     if(self.task){
@@ -51,15 +43,13 @@
     }
 }
 
-
-
 -(void)http{
     
     AFHTTPSessionManager  *sessionManager = [AFHTTPSessionManager manager];
     
     //https 证书认证 创建securityPolicy
-//    sessionManager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-//    [sessionManager.requestSerializer setValue:[self getHelpToken] forHTTPHeaderField:@"Authorization"];
+    //sessionManager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
+    //[sessionManager.requestSerializer setValue:[self getHelpToken] forHTTPHeaderField:@"Authorization"];
 
     sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
     sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -76,14 +66,12 @@
     self.task = [sessionManager GET:self.url parameters:self.params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
       
         NSString *result = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-        
         [self onSuccess:result];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        NSHTTPURLResponse* response=task.response;
+        NSHTTPURLResponse* response = task.response;
         NSString* str_error=[NSString stringWithFormat:@"%@",error];
-//        [LogUtil write:@"exception" value:str_error];
         
         if(error.code==-ErrorCodeForRequestTimeout)
         {
@@ -92,17 +80,12 @@
         else{
             [self exception:response.statusCode message:str_error];
         }
-        
     }];
-    
 }
 
 -(void)onPrev{
-//    [LogUtil write:@"url" value:self.url];
-//    [LogUtil write:@"params" value:[self.params JSONRepresentation]];
     NSLog(@"url:%@",self.url);
     NSLog(@"params:%@",[self.params JSONRepresentation]);
-    
 }
 
 -(void)onUnavaliableNetwork{
@@ -120,14 +103,10 @@
 
 -(void)exception:(NSInteger) code message:(NSString *) message{
 //[LogUtil write:@"excption" value:message];
-
 }
 
 -(void)onCancelled{
 
-
 }
-
-
 
 @end

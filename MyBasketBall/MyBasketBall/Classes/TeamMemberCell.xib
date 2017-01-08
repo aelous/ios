@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="522" height="107"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="522" height="106"/>
+                <frame key="frameInset" width="522" height="106.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-ZP-a4o">
@@ -51,10 +51,10 @@
                     <constraint firstItem="91g-O3-SS8" firstAttribute="leading" secondItem="uZQ-zX-edD" secondAttribute="trailing" constant="22" id="5zZ-ER-BwW"/>
                     <constraint firstItem="91g-O3-SS8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Q17-pX-p8Q"/>
                     <constraint firstItem="vNe-qZ-P3z" firstAttribute="leading" secondItem="QUU-Vt-20K" secondAttribute="trailing" constant="40" id="RBq-VJ-lrJ"/>
-                    <constraint firstItem="nbF-ZP-a4o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="RrH-eL-xRP"/>
-                    <constraint firstItem="QUU-Vt-20K" firstAttribute="leading" secondItem="91g-O3-SS8" secondAttribute="trailing" constant="55" id="TSG-WH-0kK"/>
+                    <constraint firstItem="nbF-ZP-a4o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="RrH-eL-xRP"/>
+                    <constraint firstItem="QUU-Vt-20K" firstAttribute="leading" secondItem="91g-O3-SS8" secondAttribute="trailing" constant="50" id="TSG-WH-0kK"/>
                     <constraint firstItem="uZQ-zX-edD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cAL-PI-r4e"/>
-                    <constraint firstItem="uZQ-zX-edD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="55" id="dQ7-3o-Yvl"/>
+                    <constraint firstItem="uZQ-zX-edD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="dQ7-3o-Yvl"/>
                     <constraint firstItem="nbF-ZP-a4o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sRV-PF-hcC"/>
                 </constraints>
             </tableViewCellContentView>

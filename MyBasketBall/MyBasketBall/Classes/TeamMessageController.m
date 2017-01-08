@@ -40,11 +40,6 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     [self prepareUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - UI
 
 - (void)prepareUI {
@@ -52,7 +47,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     self.title = @"球队信息";
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
-    TeamHeaderView *header = [[TeamHeaderView alloc] initWithFrame:CGRectMake(0, 64, width, 200)];
+    TeamHeaderView *header = [[TeamHeaderView alloc] initWithFrame:CGRectMake(0, 0, width, 200)];
     header.delegate = self;
     [self.view addSubview:header];
     
@@ -65,6 +60,20 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     
     self.selectedType = TYPE_STATUS;
     self.testHeight = 230;
+}
+
+- (void)prepareLeftItem {
+
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(leftClick)];
+    self.navigationItem.leftBarButtonItem = left;
+}
+
+- (void)leftClick {
+    if (self.leftItemBlock) {
+        self.leftItemBlock();
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
 }
 
 - (void)headerViewButtonSelectedAtIndex:(int)index {
