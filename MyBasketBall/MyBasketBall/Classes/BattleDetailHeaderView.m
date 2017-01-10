@@ -9,6 +9,7 @@
 #import "BattleDetailHeaderView.h"
 #import "SDAutoLayout.h"
 
+NSString *textColor = @"#8B8B8B";
 @interface BattleDetailHeaderView()
 
 @property (nonatomic, strong) UILabel *timeLabel;
@@ -31,14 +32,26 @@
 
 - (void)setupHeaderView {
 
-    CGFloat height = self.bounds.size.height;
-    
-//    self.timeLabel = [UILabel labelWithSize:<#(float)#> color:<#(NSString *)#>]
+//    CGFloat height = self.bounds.size.height;
+    self.timeLabel = [UILabel labelWithSize:6 color:textColor];
+    [self addSubview:self.timeLabel];
+    self.nameLabel = [UILabel labelWithSize:6 color:textColor];
+    [self addSubview:self.nameLabel];
 
 }
 
 - (void)layoutSubviews {
-
+    [super layoutSubviews];
+    
+    self.timeLabel.sd_layout
+    .leftSpaceToView(self,4)
+    .topSpaceToView(self,4);
+    
+    self.nameLabel.sd_layout
+    .topSpaceToView(self,4)
+    .rightSpaceToView(self,4);
+    
+    
     
 }
 
@@ -46,4 +59,12 @@
 
     
 }
+
+- (void)setData {
+
+    self.timeLabel.text = @"比赛时间：2016-10-26";
+    
+    [self layoutIfNeeded];
+}
+
 @end
