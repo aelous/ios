@@ -43,11 +43,6 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     UIImage *image = [UIImage createImageWithColor:[UIColor clearColor] withSize:CGSizeMake(self.view.bounds.size.width, 64)];
