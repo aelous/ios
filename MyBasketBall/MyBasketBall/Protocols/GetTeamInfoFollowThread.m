@@ -1,30 +1,31 @@
 //
-//  GetUserInfoFollowThread.m
+//  GetTeamInfoFollowThread.m
 //  MyBasketBall
 //
-//  Created by lw on 17/1/7.
+//  Created by lw on 17/1/11.
 //  Copyright © 2017年 lizhe. All rights reserved.
 //
 
-#import "GetUserInfoFollowThread.h"
+#import "GetTeamInfoFollowThread.h"
 
-@implementation GetUserInfoFollowThread
+@implementation GetTeamInfoFollowThread
 
-- (instancetype)initWithUserId:(int)userId visitorId:(int)visitorId {
 
-    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/user/userinfo/fans"];
+- (instancetype)initWithUserId:(int)userId teamId:(int)teamId {
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/team/teaminfo/fans"];
     [self setUrl:url andTimeout:defaultTimeout];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:[NSNumber numberWithInt:userId] forKey:@"owner_userid"];
-    [params setObject:[NSNumber numberWithInt:visitorId] forKey:@"visitor_userid"];
+    [params setObject:[NSNumber numberWithInt:userId] forKey:@"userid"];
+    [params setObject:[NSNumber numberWithInt:teamId] forKey:@"teamid"];
     self.params = params;
     return self;
     
 }
 
 - (void)requireonPrev:(void (^)())prev success:(void (^)(NSString *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
-
+    
     self.prev = prev;
     self.unavaliableNetwork = unavaliableNetwork;
     self.timout = timeout;

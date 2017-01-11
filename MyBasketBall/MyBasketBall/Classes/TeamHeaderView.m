@@ -11,9 +11,6 @@
 #import "UILabel+Custom.h"
 #import "UIButton+Custom.h"
 
-NSString *mainColor = @"#224FA2";
-NSString *textColor = @"#8B8B8B";
-
 @interface TeamHeaderView()
 
 @property (strong, nonatomic) UIButton *button1;
@@ -40,6 +37,8 @@ NSString *textColor = @"#8B8B8B";
 
 - (void)setupHeaderView {
 
+    NSString *mainColor = @"#224FA2";
+    NSString *textColor = @"#8B8B8B";
     CGFloat width = self.bounds.size.width;
     CGFloat height = self.bounds.size.height;
     

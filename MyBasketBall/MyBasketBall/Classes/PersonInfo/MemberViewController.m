@@ -26,9 +26,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 @interface MemberViewController ()<MemberHeaderViewButtonSelectedDelegate>
 
 @property (nonatomic, assign) int selectedType;
-
 @property (nonatomic, strong) NSMutableArray *data;
-
 @property (nonatomic, assign) int testHeight;
 
 @end

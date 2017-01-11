@@ -1,30 +1,29 @@
 //
-//  GetUserInfoFollowThread.m
+//  GetTeamInfoDynamicThread.m
 //  MyBasketBall
 //
-//  Created by lw on 17/1/7.
+//  Created by lw on 17/1/11.
 //  Copyright © 2017年 lizhe. All rights reserved.
 //
 
-#import "GetUserInfoFollowThread.h"
+#import "GetTeamInfoDynamicThread.h"
 
-@implementation GetUserInfoFollowThread
+@implementation GetTeamInfoDynamicThread
 
-- (instancetype)initWithUserId:(int)userId visitorId:(int)visitorId {
-
-    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/user/userinfo/fans"];
+- (instancetype)initWithTeamId:(int)teamId {
+    
+    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/team/teaminfo/dongtai"];
     [self setUrl:url andTimeout:defaultTimeout];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    [params setObject:[NSNumber numberWithInt:userId] forKey:@"owner_userid"];
-    [params setObject:[NSNumber numberWithInt:visitorId] forKey:@"visitor_userid"];
+    [params setObject:[NSNumber numberWithInt:teamId] forKey:@"teamid"];
     self.params = params;
     return self;
     
 }
 
-- (void)requireonPrev:(void (^)())prev success:(void (^)(NSString *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
-
+- (void)requireonPrev:(void (^)())prev success:(void (^)(NSDictionary *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
+    
     self.prev = prev;
     self.unavaliableNetwork = unavaliableNetwork;
     self.timout = timeout;
@@ -33,7 +32,7 @@
     [self require];
     
 }
-
+//TODO: MODEL
 - (void)onSuccess:(NSString *)result {
     [super onSuccess:result];
     if (self.success) {
@@ -41,13 +40,17 @@
         NSInteger code = [DataUtil numberForKey:@"code" inDictionary:dic].integerValue;
         NSString *message = [dic valueForKey:@"message"];
         if (code == 1) {
-            NSDictionary *dict = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
-            self.success();
-            NSLog(@"%@",dict);
+            NSDictionary *response = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
+            NSMutableDictionary *resultDict = [NSMutableDictionary dictionaryWithCapacity:response.count];
+            for (NSDictionary *dict in response) {
+                
+            }
+            
         } else {
             [self exception:0 message:message];
         }
     }
+    
 }
 
 - (void)onUnavaliableNetwork {

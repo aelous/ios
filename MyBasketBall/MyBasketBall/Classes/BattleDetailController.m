@@ -7,8 +7,17 @@
 //
 
 #import "BattleDetailController.h"
+#import "BattleDetailHeaderView.h"
+
+typedef NS_ENUM(NSInteger, SelectedType) {
+    TYPE_LIVE = 0,
+    TYPE_STATIC = 1,
+    TYPE_AUTO = 2,
+};
 
 @interface BattleDetailController ()
+
+@property (nonatomic, assign) int selectedType;
 
 @end
 
@@ -16,22 +25,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self prepareUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareUI {
+
+    CGFloat height = self.view.bounds.size.height;
+    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 100)];
+    __weak typeof(self)weakSelf = self;
+    headerView.titleButtonBlock = ^(int index){
+    
+        if (weakSelf.selectedType == index) {
+            return;
+        }
+        BOOL reload = false;
+        switch (index) {
+            case 0:
+                weakSelf.selectedType = TYPE_LIVE;
+                reload = true;
+                break;
+            case 1:
+                weakSelf.selectedType = TYPE_STATIC;
+                reload = true;
+                break;
+            case 2:
+                weakSelf.selectedType = TYPE_AUTO;
+                reload = true;
+                break;
+            default:
+                break;
+        }
+        if (reload) {
+            [weakSelf.tableView reloadData];
+        }
+    };
+    [self.view addSubview:headerView];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(headerView.frame), SCR_W, height - 186) style:UITableViewStyleGrouped];
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
+    [self.view addSubview:self.tableView];
+    
+    self.selectedType = TYPE_LIVE;
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
+
+
+
+
 
 @end

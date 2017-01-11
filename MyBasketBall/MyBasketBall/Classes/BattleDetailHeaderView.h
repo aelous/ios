@@ -10,6 +10,6 @@
 
 @interface BattleDetailHeaderView : UIView
 
-@property (nonatomic, copy) void(^titleButtonClick)(int);
+@property (nonatomic, copy) void(^titleButtonBlock)(int);
 
 @end
