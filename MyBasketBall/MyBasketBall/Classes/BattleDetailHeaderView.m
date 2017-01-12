@@ -50,7 +50,11 @@
     NSArray *buttonTitles = [NSArray arrayWithObjects:@"直播",@"数据统计",@"动态", nil];
     for (int i = 0; i < 3; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 40, buttonWidth, 40);
+        if (i == 1) {
+            button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 40, buttonWidth-2, 40);
+        } else {
+            button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 40, buttonWidth, 40);
+        }
         [button setTitle:buttonTitles[i] forState:UIControlStateNormal];
         [button.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
         [button setTitleColor:[UIColor ms_colorWithHexString:@"#FFFFFF"] forState:UIControlStateNormal];

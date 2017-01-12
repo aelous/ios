@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)prepareUI {
 
     CGFloat height = self.view.bounds.size.height;
-    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 100)];
+    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 168)];
     __weak typeof(self)weakSelf = self;
     headerView.titleButtonBlock = ^(int index){
     
@@ -62,7 +62,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     };
     [self.view addSubview:headerView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(headerView.frame), SCR_W, height - 186) style:UITableViewStyleGrouped];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(headerView.frame), SCR_W, height-168 ) style:UITableViewStyleGrouped];
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.dataSource = self;

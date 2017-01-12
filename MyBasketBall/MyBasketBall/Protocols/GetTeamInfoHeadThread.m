@@ -42,7 +42,6 @@
         if (code == 1) {
             NSDictionary *dict = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
             self.success(dict);
-            NSLog(@"%@",dict);
         } else {
             [self exception:0 message:message];
         }

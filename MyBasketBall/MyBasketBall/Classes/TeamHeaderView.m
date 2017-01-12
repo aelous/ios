@@ -115,7 +115,6 @@
     
     CGFloat buttonWidth = self.bounds.size.width / 4.0;
     NSArray *buttonTitles = @[@"动态",@"数据",@"成员",@"荣耀"];
-    
     for (int i = 0; i < 4; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.frame = CGRectMake(i * buttonWidth, height - 40, buttonWidth, 40);
