@@ -8,6 +8,7 @@
 
 #import "BattleDetailHeaderView.h"
 #import "SDAutoLayout.h"
+#import "BattleHeaderView.h"
 
 @interface BattleDetailHeaderView()
 
@@ -32,19 +33,26 @@
 - (void)setupHeaderView {
 
 //    NSString *mainColor = @"#224FA2";
-    NSString *textColor = @"#8B8B8B";
-    
+      NSString *textColor = @"#8B8B8B";
 //    CGFloat height = self.bounds.size.height;
-    self.timeLabel = [UILabel labelWithSize:6 color:textColor];
-    self.timeLabel.frame = CGRectMake(4, 4, SCR_W/2.0, 6);
-    [self addSubview:self.timeLabel];
+//    CGFloat leftSpace = 10;
+//    self.timeLabel = [UILabel labelWithSize:6 color:textColor];
+//    self.timeLabel.frame = CGRectMake(leftSpace, leftSpace, SCR_W/2.0, 6);
+//    [self addSubview:self.timeLabel];
+//    
+//    self.nameLabel = [UILabel labelWithSize:6 color:textColor];
+//    self.nameLabel.frame = CGRectMake(SCR_W/2.0, leftSpace, SCR_W/2.0-leftSpace, 6);
+//    self.nameLabel.textAlignment = NSTextAlignmentRight;
+//    [self addSubview:self.nameLabel];
+//    
+//    UIImageView *leftImageView = [[UIImageView alloc] initWithFrame:CGRectMake(leftSpace, CGRectGetMaxY(self.timeLabel.frame)+5, 60, 60)];
+//    leftImageView.layer.cornerRadius = 30;
+//    leftImageView.layer.masksToBounds = YES;
+//    [self addSubview:leftImageView];
     
-    self.nameLabel = [UILabel labelWithSize:6 color:textColor];
-    self.nameLabel.frame = CGRectMake(SCR_W/2.0, 4, SCR_W/2.0-4, 6);
-    self.nameLabel.textAlignment = NSTextAlignmentRight;
-    [self addSubview:self.nameLabel];
     
-    
+    BattleHeaderView *headerView = [[BattleHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 150)];
+    [self addSubview:headerView];
     
     CGFloat buttonWidth = self.bounds.size.width / 3.0;
     NSArray *buttonTitles = [NSArray arrayWithObjects:@"直播",@"数据统计",@"动态", nil];

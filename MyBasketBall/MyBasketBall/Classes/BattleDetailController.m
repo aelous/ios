@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)prepareUI {
 
     CGFloat height = self.view.bounds.size.height;
-    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 168)];
+    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 190)];
     __weak typeof(self)weakSelf = self;
     headerView.titleButtonBlock = ^(int index){
     

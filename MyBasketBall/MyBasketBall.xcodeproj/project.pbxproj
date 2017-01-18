@@ -125,6 +125,9 @@
 		C96123531E267BDA0084808D /* TeamInfoHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123521E267BDA0084808D /* TeamInfoHeaderModel.m */; };
 		C96123561E2680D00084808D /* GetTeamInfoFollowThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123551E2680D00084808D /* GetTeamInfoFollowThread.m */; };
 		C96123591E2682DD0084808D /* GetTeamInfoDynamicThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123581E2682DD0084808D /* GetTeamInfoDynamicThread.m */; };
+		C961235C1E2FB3A40084808D /* BattleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C961235B1E2FB3A40084808D /* BattleHeaderView.xib */; };
+		C96123661E2FBF550084808D /* BattleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123651E2FBF550084808D /* BattleHeaderView.m */; };
+		C96123691E2FC07C0084808D /* BattleHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123681E2FC07C0084808D /* BattleHeaderModel.m */; };
 		C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */; };
 		C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098401DFC38DA00B5B6BD /* MemberDataCell.m */; };
 		C9A098491DFC38DA00B5B6BD /* MemberDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098411DFC38DA00B5B6BD /* MemberDataCell.xib */; };
@@ -471,6 +474,11 @@
 		C96123551E2680D00084808D /* GetTeamInfoFollowThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoFollowThread.m; sourceTree = "<group>"; };
 		C96123571E2682DD0084808D /* GetTeamInfoDynamicThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoDynamicThread.h; sourceTree = "<group>"; };
 		C96123581E2682DD0084808D /* GetTeamInfoDynamicThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoDynamicThread.m; sourceTree = "<group>"; };
+		C961235B1E2FB3A40084808D /* BattleHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleHeaderView.xib; sourceTree = "<group>"; };
+		C96123641E2FBF550084808D /* BattleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleHeaderView.h; sourceTree = "<group>"; };
+		C96123651E2FBF550084808D /* BattleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleHeaderView.m; sourceTree = "<group>"; };
+		C96123671E2FC07C0084808D /* BattleHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleHeaderModel.h; sourceTree = "<group>"; };
+		C96123681E2FC07C0084808D /* BattleHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleHeaderModel.m; sourceTree = "<group>"; };
 		C9A0983B1DFC38C000B5B6BD /* MemberHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeaderView.h; sourceTree = "<group>"; };
 		C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeaderView.m; sourceTree = "<group>"; };
 		C9A0983F1DFC38DA00B5B6BD /* MemberDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataCell.h; sourceTree = "<group>"; };
@@ -1275,6 +1283,11 @@
 			children = (
 				C96123401E2524F90084808D /* BattleDetailHeaderView.h */,
 				C96123411E2524F90084808D /* BattleDetailHeaderView.m */,
+				C961235B1E2FB3A40084808D /* BattleHeaderView.xib */,
+				C96123641E2FBF550084808D /* BattleHeaderView.h */,
+				C96123651E2FBF550084808D /* BattleHeaderView.m */,
+				C96123671E2FC07C0084808D /* BattleHeaderModel.h */,
+				C96123681E2FC07C0084808D /* BattleHeaderModel.m */,
 			);
 			name = header;
 			path = ..;
@@ -1585,6 +1598,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B714591DBCBDCE006E067F /* close-button-2.png in Resources */,
+				C961235C1E2FB3A40084808D /* BattleHeaderView.xib in Resources */,
 				04B712E21DBCBD35006E067F /* LaunchScreen.storyboard in Resources */,
 				C9A0987C1DFC577A00B5B6BD /* TeamGloryCell.xib in Resources */,
 				04B7145A1DBCBDCE006E067F /* close-button-3.png in Resources */,
@@ -1684,6 +1698,7 @@
 				04B7144F1DBCBDCE006E067F /* DateUtil.m in Sources */,
 				049C40181DC88651000878BB /* GetLeagueInSchoolThread.m in Sources */,
 				04B714141DBCBDCE006E067F /* RegisterPersonInfoViewController.m in Sources */,
+				C96123661E2FBF550084808D /* BattleHeaderView.m in Sources */,
 				04B714121DBCBDCE006E067F /* LoginViewModel.m in Sources */,
 				C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */,
 				04B7146C1DBCBDCE006E067F /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
@@ -1755,6 +1770,7 @@
 				C961233E1E25229B0084808D /* BattleDetailController.m in Sources */,
 				C96123101E23D5FE0084808D /* UserInfoStatisticModel.m in Sources */,
 				C96122F71E226A770084808D /* UserInfoDataModel.m in Sources */,
+				C96123691E2FC07C0084808D /* BattleHeaderModel.m in Sources */,
 				C9D45E101E0ABEFC00B91ABE /* CreateTeamController.m in Sources */,
 				04B714641DBCBDCE006E067F /* LKDBHelper.m in Sources */,
 				04B714191DBCBDCE006E067F /* RegisterTextField.m in Sources */,
