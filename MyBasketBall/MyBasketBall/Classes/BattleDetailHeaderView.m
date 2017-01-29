@@ -51,7 +51,7 @@
 //    [self addSubview:leftImageView];
     
     
-    BattleHeaderView *headerView = [[BattleHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 150)];
+    BattleHeaderView *headerView = [[BattleHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 120)];
     [self addSubview:headerView];
     
     CGFloat buttonWidth = self.bounds.size.width / 3.0;
@@ -59,14 +59,14 @@
     for (int i = 0; i < 3; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         if (i == 1) {
-            button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 40, buttonWidth-2, 40);
+            button.frame = CGRectMake(i * buttonWidth+1, self.bounds.size.height - 30, buttonWidth-2, 30);
         } else {
-            button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 40, buttonWidth, 40);
+            button.frame = CGRectMake(i * buttonWidth, self.bounds.size.height - 30, buttonWidth, 30);
         }
         [button setTitle:buttonTitles[i] forState:UIControlStateNormal];
-        [button.titleLabel setFont:[UIFont systemFontOfSize:12.0]];
+        [button.titleLabel setFont:[UIFont systemFontOfSize:14.0]];
         [button setTitleColor:[UIColor ms_colorWithHexString:@"#FFFFFF"] forState:UIControlStateNormal];
-        [button setTitleColor:[UIColor ms_colorWithHexString:@"#224FA2"] forState:UIControlStateSelected];
+//        [button setTitleColor:[UIColor ms_colorWithHexString:@"#224FA2"] forState:UIControlStateSelected];
         [button setBackgroundColor:[UIColor ms_colorWithHexString:@"#224FA2"]];
         [button setTag:i];
         [button addTarget:self action:@selector(headerButtonSelected:) forControlEvents:UIControlEventTouchUpInside];

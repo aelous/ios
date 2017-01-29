@@ -14,7 +14,13 @@
 #import "MemberDataCell.h"
 #import "UILabel+Custom.h"
 #import "TableData.h"
-#import "UIColor+StringColor.h"
+
+#import "GetTeamInfoHeadThread.h"
+#import "GetTeamInfoFollowThread.h"
+#import "GetTeamInfoDynamicThread.h"
+#import "GetTeamInfoStatisticThread.h"
+
+#import "UserInfoBattleModel.h"
 
 typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_STATUS = 0,
@@ -25,9 +31,12 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 @interface TeamMessageController ()<TeamHeaderViewButtonSelectedDelegate>
 
+@property (nonatomic, strong) TeamHeaderView *headerView;
 @property (nonatomic, assign) int selectedType;
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, assign) int testHeight;
+
+@property (nonatomic, strong) NSMutableArray *dynamicArray;
 
 @end
 
@@ -38,6 +47,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self prepareUI];
+    [self requestHeaderData];
 }
 
 #pragma mark - UI
@@ -47,11 +57,23 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     self.title = @"球队信息";
     CGFloat width = self.view.bounds.size.width;
     CGFloat height = self.view.bounds.size.height;
-    TeamHeaderView *header = [[TeamHeaderView alloc] initWithFrame:CGRectMake(0, 0, width, 200)];
-    header.delegate = self;
-    [self.view addSubview:header];
+    self.headerView = [[TeamHeaderView alloc] initWithFrame:CGRectMake(0, 0, width, 200)];
+    self.headerView.delegate = self;
+    __weak typeof(self)weakSelf = self;
+    self.headerView.followBlock = ^{
+        GetTeamInfoFollowThread *follow = [[GetTeamInfoFollowThread alloc] initWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId];
+        [follow requireonPrev:^{
+        } success:^(NSString *str) {
+            [weakSelf showToast:@"关注状态修改成功"];
+        } unavaliableNetwork:^{
+        } timeout:^{
+        } exception:^(NSString *message) {
+        }];
+        
+    };
+    [self.view addSubview:self.headerView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(header.frame), width, height - 200 - 64)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(self.headerView.frame), width, height - 200 - 64)];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.delegate = self;
@@ -81,6 +103,37 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     self.selectedType = index;
     [self.tableView reloadData];
     
+}
+
+#pragma mark - request data 
+
+- (void)requestHeaderData {
+
+    GetTeamInfoHeadThread *headThread = [[GetTeamInfoHeadThread alloc] initWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId];
+    [headThread requireonPrev:^{
+    } success:^(NSDictionary *dic) {
+        TeamHeaderModel *model = [[TeamHeaderModel alloc] initWithDict:dic];
+        self.headerView.headerModel = model;
+    } unavaliableNetwork:^{
+    } timeout:^{
+    } exception:^(NSString *message) {
+    }];
+    
+}
+
+- (void)requestDynamicData {
+    GetTeamInfoDynamicThread *dynamic = [[GetTeamInfoDynamicThread alloc] initWithTeamId:[AppDelegate instance].userModel.teamId];
+    [dynamic requireonPrev:^{
+    } success:^(NSArray *dic) {
+        
+        
+        
+        
+    } unavaliableNetwork:^{
+    } timeout:^{
+    } exception:^(NSString *message) {
+    }];
+
 }
 
 #pragma mark - tableview delegate and datasource

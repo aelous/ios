@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TeamInfoHeaderModel : NSObject
+@interface TeamHeaderModel : NSObject
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSNumber *matchNum;

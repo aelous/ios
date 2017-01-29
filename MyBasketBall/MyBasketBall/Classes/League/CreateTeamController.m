@@ -80,7 +80,7 @@
 
 - (void)preparePickerView {
 
-    self.cities = [NSArray arrayWithObjects:@"北京",@"天津",@"河北",nil];
+    self.cities = [NSArray arrayWithObjects:@"请选择",@"北京",@"天津",@"河北",nil];
     self.cityPickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height, SCR_W, 200)];
     self.cityPickerView.backgroundColor = [UIColor whiteColor];
     self.cityPickerView.delegate = self;
@@ -112,6 +112,7 @@
     } exception:^(NSString *message) {
         NSLog(@"%@",message);
     }];
+    
 }
 
 #pragma mark - picker view delegate
@@ -137,7 +138,11 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    self.cityText.text = self.cities[row];
+    if (row == 0) {
+        self.cityText.text = nil;
+    } else {
+        self.cityText.text = self.cities[row];
+    }
     [self.view endEditing:YES];
 }
 

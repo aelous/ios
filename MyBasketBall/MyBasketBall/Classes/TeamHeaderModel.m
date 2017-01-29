@@ -6,9 +6,9 @@
 //  Copyright © 2017年 lizhe. All rights reserved.
 //
 
-#import "TeamInfoHeaderModel.h"
+#import "TeamHeaderModel.h"
 
-@implementation TeamInfoHeaderModel
+@implementation TeamHeaderModel
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
 

@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)prepareUI {
 
     CGFloat height = self.view.bounds.size.height;
-    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 190)];
+    BattleDetailHeaderView *headerView = [[BattleDetailHeaderView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, 170)];
     __weak typeof(self)weakSelf = self;
     headerView.titleButtonBlock = ^(int index){
     
@@ -73,10 +73,47 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     
 }
 
+#pragma mark - tableview datasource & delegate
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    switch (self.selectedType) {
+        case TYPE_LIVE: {
+            return 3;
+        }
+            break;
+        case TYPE_STATIC: {
+            return 2;
+        }
+            break;
+        case TYPE_AUTO: {
+            return 2;
+        }
+            break;
+        default:
+            return 0;
+            break;
+    }
+}
 
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    switch (self.selectedType) {
+        case TYPE_LIVE:
+            return 30;
+            break;
+        case TYPE_STATIC:
+            return 40;
+            break;
+        case TYPE_AUTO:
+            return 40;
+            break;
+        default:
+            return 0;
+            break;
+    }
+}
 
 
 

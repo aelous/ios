@@ -14,7 +14,9 @@
 
     if (self = [super initWithFrame:frame]) {
         UINib *nib =[UINib nibWithNibName:@"BattleHeaderView" bundle:nil];
-        self = [nib instantiateWithOwner:nil options:nil].lastObject;
+        BattleHeaderView *view = [nib instantiateWithOwner:nil options:nil].lastObject;
+        view.frame = frame;
+        self = view;
     }
     return self;
 }

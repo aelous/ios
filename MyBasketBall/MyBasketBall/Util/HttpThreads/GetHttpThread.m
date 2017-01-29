@@ -73,11 +73,10 @@
         NSHTTPURLResponse* response = task.response;
         NSString* str_error=[NSString stringWithFormat:@"%@",error];
         
-        if(error.code==-ErrorCodeForRequestTimeout)
-        {
+        if(error.code==-ErrorCodeForRequestTimeout) {
             [self onTimeout];
         }
-        else{
+        else {
             [self exception:response.statusCode message:str_error];
         }
     }];
