@@ -136,6 +136,9 @@
 		C961238A1E4372E30084808D /* TeamMemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123891E4372E30084808D /* TeamMemberModel.m */; };
 		C961238D1E4432080084808D /* GetTeamInfoGloryThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C961238C1E4432080084808D /* GetTeamInfoGloryThread.m */; };
 		C96123901E4437420084808D /* TeamGloryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C961238F1E4437420084808D /* TeamGloryModel.m */; };
+		C96123941E44B3A20084808D /* ManageTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123931E44B3A20084808D /* ManageTeamController.m */; };
+		C96123981E44B3CA0084808D /* JoinTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123971E44B3CA0084808D /* JoinTeamController.m */; };
+		C961239C1E44B5B20084808D /* ManageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C961239B1E44B5B20084808D /* ManageItemView.m */; };
 		C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */; };
 		C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098401DFC38DA00B5B6BD /* MemberDataCell.m */; };
 		C9A098491DFC38DA00B5B6BD /* MemberDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098411DFC38DA00B5B6BD /* MemberDataCell.xib */; };
@@ -502,6 +505,12 @@
 		C961238C1E4432080084808D /* GetTeamInfoGloryThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoGloryThread.m; sourceTree = "<group>"; };
 		C961238E1E4437420084808D /* TeamGloryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamGloryModel.h; sourceTree = "<group>"; };
 		C961238F1E4437420084808D /* TeamGloryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamGloryModel.m; sourceTree = "<group>"; };
+		C96123921E44B3A20084808D /* ManageTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTeamController.h; sourceTree = "<group>"; };
+		C96123931E44B3A20084808D /* ManageTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTeamController.m; sourceTree = "<group>"; };
+		C96123961E44B3CA0084808D /* JoinTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinTeamController.h; sourceTree = "<group>"; };
+		C96123971E44B3CA0084808D /* JoinTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinTeamController.m; sourceTree = "<group>"; };
+		C961239A1E44B5B20084808D /* ManageItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageItemView.h; sourceTree = "<group>"; };
+		C961239B1E44B5B20084808D /* ManageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageItemView.m; sourceTree = "<group>"; };
 		C9A0983B1DFC38C000B5B6BD /* MemberHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeaderView.h; sourceTree = "<group>"; };
 		C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeaderView.m; sourceTree = "<group>"; };
 		C9A0983F1DFC38DA00B5B6BD /* MemberDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataCell.h; sourceTree = "<group>"; };
@@ -699,8 +708,8 @@
 				9B8E99791E03B964003CDDD8 /* league-in */,
 				9B8E997A1E03B976003CDDD8 /* league-between */,
 				9B8E997B1E03B992003CDDD8 /* league-date */,
-				C9D45E0D1E0ABC8800B91ABE /* CreateTeam */,
 				C96123441E265AC10084808D /* CreateLeague */,
+				C9D45E0D1E0ABC8800B91ABE /* CreateTeam */,
 			);
 			name = "League(比赛)";
 			path = League;
@@ -1344,6 +1353,34 @@
 			name = metaData;
 			sourceTree = "<group>";
 		};
+		C96123911E44B3760084808D /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				C96123991E44B5940084808D /* view */,
+				C96123921E44B3A20084808D /* ManageTeamController.h */,
+				C96123931E44B3A20084808D /* ManageTeamController.m */,
+			);
+			name = manage;
+			sourceTree = "<group>";
+		};
+		C96123951E44B3A90084808D /* join */ = {
+			isa = PBXGroup;
+			children = (
+				C96123961E44B3CA0084808D /* JoinTeamController.h */,
+				C96123971E44B3CA0084808D /* JoinTeamController.m */,
+			);
+			name = join;
+			sourceTree = "<group>";
+		};
+		C96123991E44B5940084808D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C961239A1E44B5B20084808D /* ManageItemView.h */,
+				C961239B1E44B5B20084808D /* ManageItemView.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		C9A098391DFC38A200B5B6BD /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1480,6 +1517,8 @@
 				C9D45E0E1E0ABEFC00B91ABE /* CreateTeamController.h */,
 				C9D45E0F1E0ABEFC00B91ABE /* CreateTeamController.m */,
 				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
+				C96123911E44B3760084808D /* manage */,
+				C96123951E44B3A90084808D /* join */,
 			);
 			name = CreateTeam;
 			sourceTree = "<group>";
@@ -1705,6 +1744,7 @@
 				C9D45E271E1BDA6800B91ABE /* GetCreateTeamThread.m in Sources */,
 				04B714081DBCBDCE006E067F /* BaseViewController.m in Sources */,
 				04B7146E1DBCBDCE006E067F /* JGProgressHUDPieIndicatorView.m in Sources */,
+				C96123941E44B3A20084808D /* ManageTeamController.m in Sources */,
 				04B7147C1DBCBDCE006E067F /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */,
 				04B7147B1DBCBDCE006E067F /* SBJsonWriter.m in Sources */,
@@ -1817,6 +1857,7 @@
 				04B7146B1DBCBDCE006E067F /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				04B714681DBCBDCE006E067F /* JGProgressHUD.m in Sources */,
 				04B7142D1DBCBDCE006E067F /* LZDateTimePicker.m in Sources */,
+				C96123981E44B3CA0084808D /* JoinTeamController.m in Sources */,
 				04B714531DBCBDCE006E067F /* GEOUtil.m in Sources */,
 				04BEE5AC1DC22E47000ABDC2 /* LeagueListTableViewCell.m in Sources */,
 				046717E31DD09B6600DAB0EB /* MatchTeamModel.m in Sources */,
@@ -1832,6 +1873,7 @@
 				04B714671DBCBDCE006E067F /* NSObject+LKModel.m in Sources */,
 				C938D5CC1E0575090078B5C5 /* FollowTeamController.m in Sources */,
 				04B7147A1DBCBDCE006E067F /* SBJsonUTF8Stream.m in Sources */,
+				C961239C1E44B5B20084808D /* ManageItemView.m in Sources */,
 				04B714391DBCBDCE006E067F /* PostLoginThread.m in Sources */,
 				04B714761DBCBDCE006E067F /* SBJsonStreamWriter.m in Sources */,
 				04B714701DBCBDCE006E067F /* NSObject+SBJson.m in Sources */,

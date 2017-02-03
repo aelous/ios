@@ -7,16 +7,17 @@
 //
 
 #import "TeamMessageController.h"
+#import "UILabel+Custom.h"
 #import "TeamHeaderView.h"
 #import "MemberBattleCell.h"
 #import "TeamMemberCell.h"
 #import "TeamGloryCell.h"
 #import "MemberDataCell.h"
-#import "UILabel+Custom.h"
-#import "TableData.h"
-
+//#import "TableData.h"
 #import "TeamMessageViewModel.h"
 #import "UserInfoStatisticModel.h"
+#import "ManageTeamController.h"
+#import "JoinTeamController.h"
 
 typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_STATUS = 0,
@@ -48,6 +49,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     [super viewDidLoad];
     self.viewModel = [[TeamMessageViewModel alloc] init];
     [self prepareUI];
+    [self prepareRightItems];
     [self requestHeaderData];
     [self requestDynamicData];
 }
@@ -82,18 +84,38 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     self.testHeight = 300;
 }
 
-- (void)prepareLeftItem {
+//- (void)prepareLeftItem {
+//
+//    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(leftClick)];
+//    self.navigationItem.leftBarButtonItem = left;
+//}
+//
+//- (void)leftClick {
+//    if (self.leftItemBlock) {
+//        self.leftItemBlock();
+//    } else {
+//        [self.navigationController popViewControllerAnimated:YES];
+//    }
+//}
 
-    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(leftClick)];
-    self.navigationItem.leftBarButtonItem = left;
+- (void)prepareRightItems {
+
+    UIBarButtonItem *manage = [[UIBarButtonItem alloc] initWithTitle:@"管理" style:UIBarButtonItemStylePlain target:self action:@selector(manage)];
+    UIBarButtonItem *join = [[UIBarButtonItem alloc] initWithTitle:@"加入" style:UIBarButtonItemStylePlain target:self action:@selector(join)];
+    self.navigationItem.rightBarButtonItems = @[manage, join];
 }
 
-- (void)leftClick {
-    if (self.leftItemBlock) {
-        self.leftItemBlock();
-    } else {
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+- (void)manage {
+    NSLog(@"管理");
+    ManageTeamController *manage = [[ManageTeamController alloc] init];
+    [self.navigationController pushViewController:manage animated:YES];
+    
+}
+
+- (void)join {
+    NSLog(@"加入");
+    JoinTeamController *join = [[JoinTeamController alloc] init];
+    [self.navigationController pushViewController:join animated:YES];
 }
 
 - (void)headerViewButtonSelectedAtIndex:(int)index {

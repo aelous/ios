@@ -80,7 +80,7 @@
     [statistic requireonPrev:^{
     } success:^(NSInteger status, NSDictionary *dic) {
         
-        if (status == 1) {
+        if (status == 1 && dic.count) {
             UserInfoStatisticModel *model = [[UserInfoStatisticModel alloc] initWithDict:dic];
             block(status, model);
         } else {
