@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TeamGloryModel.h"
 
 @interface TeamGloryCell : UITableViewCell
 
+@property (nonatomic, strong) TeamGloryModel *model;
 + (TeamGloryCell *)cellWithTableView:(UITableView *)tableView;
 
 @end

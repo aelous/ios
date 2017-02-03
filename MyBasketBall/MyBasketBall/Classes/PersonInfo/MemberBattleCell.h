@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserInfoBattleModel.h"
 
 @interface MemberBattleCell : UITableViewCell
 
+@property (nonatomic, strong) UserInfoBattleModel *model;
 + (MemberBattleCell *)cellWithTableView:(UITableView *)tableView;
 
 @end

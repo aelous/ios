@@ -13,10 +13,10 @@
 @property (nonatomic, copy) void (^prev)();
 @property (nonatomic, copy) void (^unavaliableNetwork)();
 @property (nonatomic, copy) void (^timout)();
-@property (nonatomic, copy) void (^success)(NSDictionary *arr);
+@property (nonatomic, copy) void (^success)(NSInteger status, NSDictionary *arr);
 @property (nonatomic, copy) void (^exception)(NSString* message);
 
 - (instancetype)initWithTeamId:(int)teamId;
-- (void)requireonPrev:(void (^)())prev success:(void (^)(NSDictionary *dic))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString* message))exception;
+- (void)requireonPrev:(void (^)())prev success:(void (^)(NSInteger status, NSDictionary *dic))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString* message))exception;
 
 @end

@@ -8,6 +8,14 @@
 
 #import "TeamMemberCell.h"
 
+@interface TeamMemberCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *number;
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *position;
+
+@end
+
 @implementation TeamMemberCell
 
 - (void)awakeFromNib {
@@ -30,6 +38,15 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
+}
+
+- (void)setModel:(TeamMemberModel *)model {
+
+    _model = model;
+    self.number.text = model.number;
+    self.name.text = model.name;
+    self.position.text = model.position;
+    
 }
 
 @end

@@ -8,6 +8,16 @@
 
 #import "TeamStatusCell.h"
 
+@interface TeamStatusCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *name1;
+@property (weak, nonatomic) IBOutlet UILabel *score1;
+@property (weak, nonatomic) IBOutlet UILabel *name2;
+@property (weak, nonatomic) IBOutlet UILabel *score2;
+
+
+@end
+
 @implementation TeamStatusCell
 
 - (void)awakeFromNib {
@@ -30,6 +40,12 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
+}
+
+- (void)setModel:(UserInfoBattleModel *)model {
+
+    _model = model;
+    
 }
 
 @end

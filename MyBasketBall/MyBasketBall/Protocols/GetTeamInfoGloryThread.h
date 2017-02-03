@@ -1,14 +1,14 @@
 //
-//  GetTeamInfoDynamicThread.h
+//  GetTeamGloryThread.h
 //  MyBasketBall
 //
-//  Created by lw on 17/1/11.
+//  Created by lw on 17/2/3.
 //  Copyright © 2017年 lizhe. All rights reserved.
 //
 
 #import "GetHttpThread.h"
 
-@interface GetTeamInfoDynamicThread : GetHttpThread
+@interface GetTeamInfoGloryThread : GetHttpThread
 
 @property (nonatomic, copy) void (^prev)();
 @property (nonatomic, copy) void (^unavaliableNetwork)();

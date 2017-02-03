@@ -20,5 +20,6 @@
 @property (nonatomic,weak) id<TeamHeaderViewButtonSelectedDelegate> delegate;
 @property (nonatomic, strong) TeamHeaderModel *headerModel;
 @property (nonatomic, copy) void(^followBlock)(void);
+@property (nonatomic, strong) UIButton *follow;
 
 @end

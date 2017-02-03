@@ -24,7 +24,7 @@
 @property (nonatomic, strong) UILabel *gameCount;
 @property (nonatomic, strong) UILabel *memberCount;
 @property (nonatomic, strong) UILabel *followCount;
-@property (nonatomic, strong) UIButton *follow;
+
 @property (nonatomic, strong) UILabel *introduce;
 
 @end
@@ -103,6 +103,7 @@
     UIButton *button = [UIButton colorButtonWithTitle:@"关注" fontSize:12 titleColor:@"#FFFFFF" backgroundColor:@"#3AB89C"];
     button.frame = CGRectMake(subX + 2*subWidth, labelY - 1, 30, 17);
     [button addTarget:self action:@selector(followTeam) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"已关注" forState:UIControlStateDisabled];
     self.follow = button;
     [self addSubview:self.follow];
    

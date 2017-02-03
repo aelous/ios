@@ -8,19 +8,15 @@
 
 #import "TeamMessageController.h"
 #import "TeamHeaderView.h"
-#import "TeamStatusCell.h"
+#import "MemberBattleCell.h"
 #import "TeamMemberCell.h"
 #import "TeamGloryCell.h"
 #import "MemberDataCell.h"
 #import "UILabel+Custom.h"
 #import "TableData.h"
 
-#import "GetTeamInfoHeadThread.h"
-#import "GetTeamInfoFollowThread.h"
-#import "GetTeamInfoDynamicThread.h"
-#import "GetTeamInfoStatisticThread.h"
-
-#import "UserInfoBattleModel.h"
+#import "TeamMessageViewModel.h"
+#import "UserInfoStatisticModel.h"
 
 typedef NS_ENUM(NSInteger, SelectedType) {
     TYPE_STATUS = 0,
@@ -33,10 +29,14 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 @property (nonatomic, strong) TeamHeaderView *headerView;
 @property (nonatomic, assign) int selectedType;
-@property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, assign) int testHeight;
 
+@property (nonatomic, strong) TeamMessageViewModel *viewModel;
 @property (nonatomic, strong) NSMutableArray *dynamicArray;
+@property (nonatomic, strong) NSDictionary *statisticDict;
+@property (nonatomic, strong) NSArray *keys;
+@property (nonatomic, strong) NSArray *memberArray;
+@property (nonatomic, strong) NSArray *gloryArray;
 
 @end
 
@@ -46,8 +46,10 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.viewModel = [[TeamMessageViewModel alloc] init];
     [self prepareUI];
     [self requestHeaderData];
+    [self requestDynamicData];
 }
 
 #pragma mark - UI
@@ -61,15 +63,11 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     self.headerView.delegate = self;
     __weak typeof(self)weakSelf = self;
     self.headerView.followBlock = ^{
-        GetTeamInfoFollowThread *follow = [[GetTeamInfoFollowThread alloc] initWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId];
-        [follow requireonPrev:^{
-        } success:^(NSString *str) {
-            [weakSelf showToast:@"关注状态修改成功"];
-        } unavaliableNetwork:^{
-        } timeout:^{
-        } exception:^(NSString *message) {
+        [weakSelf.viewModel queryTeamFollowWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+            if (state == 1) {
+                weakSelf.headerView.follow.enabled = weakSelf.headerView.follow.enabled;
+            }
         }];
-        
     };
     [self.view addSubview:self.headerView];
     
@@ -81,7 +79,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     [self.view addSubview:self.tableView];
     
     self.selectedType = TYPE_STATUS;
-    self.testHeight = 230;
+    self.testHeight = 300;
 }
 
 - (void)prepareLeftItem {
@@ -101,6 +99,41 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)headerViewButtonSelectedAtIndex:(int)index {
 
     self.selectedType = index;
+    switch (self.selectedType) {
+        case TYPE_STATUS:
+            [self requestDynamicData];
+            break;
+        case TYPE_DATA: {
+            __weak typeof(self)weakSelf = self;
+            [self.viewModel queryTeamStatisticWithTeamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+                if (state == 1) {
+                    weakSelf.keys = [result allKeys];
+                    weakSelf.statisticDict = result;
+                }
+            }];
+        }
+            break;
+        case TYPE_MEMBER: {
+            __weak typeof(self)weakSelf = self;
+            [self.viewModel queryTeamMemberWithTeamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+                if (state == 1) {
+                    weakSelf.memberArray = result;
+                }
+            }];
+        }
+            break;
+        case TYPE_GLORY: {
+            __weak typeof(self)weakSelf = self;
+            [self.viewModel queryTeamGloryWithTeamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+                if (state == 1) {
+                    weakSelf.gloryArray = result;
+                }
+            }];
+        }
+            break;
+        default:
+            break;
+    }
     [self.tableView reloadData];
     
 }
@@ -109,47 +142,33 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 - (void)requestHeaderData {
 
-    GetTeamInfoHeadThread *headThread = [[GetTeamInfoHeadThread alloc] initWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId];
-    [headThread requireonPrev:^{
-    } success:^(NSDictionary *dic) {
-        TeamHeaderModel *model = [[TeamHeaderModel alloc] initWithDict:dic];
-        self.headerView.headerModel = model;
-    } unavaliableNetwork:^{
-    } timeout:^{
-    } exception:^(NSString *message) {
+    __weak typeof(self)weakSelf = self;
+    [self.viewModel queryTeamHeaderWithUserId:[AppDelegate instance].userModel.userId teamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+        if (state == 1) {
+            weakSelf.headerView.headerModel = (TeamHeaderModel *)result;
+        }
     }];
-    
 }
 
 - (void)requestDynamicData {
-    GetTeamInfoDynamicThread *dynamic = [[GetTeamInfoDynamicThread alloc] initWithTeamId:[AppDelegate instance].userModel.teamId];
-    [dynamic requireonPrev:^{
-    } success:^(NSArray *dic) {
-        
-        
-        
-        
-    } unavaliableNetwork:^{
-    } timeout:^{
-    } exception:^(NSString *message) {
+    
+    __weak typeof(self)weakSelf = self;
+    [self.viewModel queryTeamDynamicDataWithTeamId:[AppDelegate instance].userModel.teamId complete:^(UIState state, id result) {
+        if (state == 1) {
+            weakSelf.dynamicArray = result;
+        }
     }];
-
 }
+
 
 #pragma mark - tableview delegate and datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    int random = 3;
     switch (self.selectedType) {
-        case TYPE_STATUS: {
-            return random;
-        }
-            break;
         case TYPE_DATA: {
-            return random;
+            return self.statisticDict.count;
         }
-            break;
         default:
             return 1;
             break;
@@ -158,32 +177,42 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    TableData *data = [self.data objectAtIndex:section];
     switch (self.selectedType) {
         case TYPE_STATUS: {
-            return 2;
+            return self.dynamicArray.count;
         }
             break;
         case TYPE_DATA: {
-            return data.isShow ? 1 : 0;
+            NSString *key = [self.keys objectAtIndex:section];
+            UserInfoStatisticModel *model = [self.statisticDict objectForKey:key];
+            return model.isShow ? 1 : 0;
         }
             break;
+        case TYPE_MEMBER: {
+            return self.memberArray.count;
+        }
+        case TYPE_GLORY: {
+            return self.gloryArray.count;
+        }
         default:
-            return 4;
-            break;
+            return 0;
     }
 }
+
+//TODO: type_data
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     switch (self.selectedType) {
         case TYPE_STATUS: {
-            TeamStatusCell *cell = [TeamStatusCell cellWithTableView:tableView];
+            MemberBattleCell *cell = [MemberBattleCell cellWithTableView:tableView];
+            cell.model = self.dynamicArray[indexPath.row];
             return cell;
         }
             break;
         case TYPE_DATA: {
             MemberDataCell *cell = [MemberDataCell cellWithTabelView:tableView];
+            
             cell.blockData = ^{
                 self.testHeight = 350;
                 [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
@@ -193,11 +222,13 @@ typedef NS_ENUM(NSInteger, SelectedType) {
             break;
         case TYPE_MEMBER: {
             TeamMemberCell *cell = [TeamMemberCell cellWithTableView:tableView];
+            cell.model = self.memberArray[indexPath.row];
             return cell;
         }
             break;
         case TYPE_GLORY: {
             TeamGloryCell *cell = [TeamGloryCell cellWithTableView:tableView];
+            cell.model = self.gloryArray[indexPath.row];
             return cell;
         }
             break;
@@ -275,8 +306,9 @@ typedef NS_ENUM(NSInteger, SelectedType) {
             UIImageView *icon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow"]];
             icon.center = CGPointMake(10, header.center.y);
             [header insertSubview:icon atIndex:0];
-            TableData *data = [self.data objectAtIndex:section];
-            if (data.isShow) {
+            NSString *key = [self.keys objectAtIndex:section];
+            UserInfoStatisticModel *model = [self.statisticDict objectForKey:key];
+            if (model.isShow) {
                 icon.transform = CGAffineTransformMakeRotation(M_PI_2);
             }
             
@@ -313,24 +345,25 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 - (void)headerClick:(UITapGestureRecognizer *)tap {
     
     UIView *view = tap.view;
-    TableData *data = [self.data objectAtIndex:view.tag];
-    data.isShow = !data.isShow;
+    NSString *key = [self.keys objectAtIndex:view.tag];
+    UserInfoStatisticModel *model = [self.statisticDict objectForKey:key];
+    model.isShow = !model.isShow;
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:view.tag] withRowAnimation:UITableViewRowAnimationFade];
     
 }
 
-- (NSMutableArray *)data {
-    
-    if (!_data) {
-        _data = [[NSMutableArray alloc] init];
-        for (int i = 0; i<3; i++) {
-            TableData *value = [[TableData alloc] init];
-            value.name = [NSString stringWithFormat:@"第%d个",i];
-            value.isShow = false;
-            [_data addObject:value];
-        }
-    }
-    return _data;
-}
+//- (NSMutableArray *)data {
+//    
+//    if (!_data) {
+//        _data = [[NSMutableArray alloc] init];
+//        for (int i = 0; i<3; i++) {
+//            TableData *value = [[TableData alloc] init];
+//            value.name = [NSString stringWithFormat:@"第%d个",i];
+//            value.isShow = false;
+//            [_data addObject:value];
+//        }
+//    }
+//    return _data;
+//}
 
 @end

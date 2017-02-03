@@ -22,7 +22,7 @@
     return self;
 }
 
-- (void)requireonPrev:(void (^)())prev success:(void (^)(NSDictionary *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
+- (void)requireonPrev:(void (^)())prev success:(void (^)(NSInteger, NSDictionary *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
     
     self.prev = prev;
     self.unavaliableNetwork = unavaliableNetwork;
@@ -38,12 +38,11 @@
     if (self.success) {
         NSDictionary *dic = [result JSONValue];
         NSInteger code = [DataUtil numberForKey:@"code" inDictionary:dic].integerValue;
-        NSString *message = [dic valueForKey:@"message"];
         if (code == 1) {
             NSDictionary *dict = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
-            self.success(dict);
+            self.success(code, dict);
         } else {
-            [self exception:0 message:message];
+            self.success(code, nil);
         }
     }
 }

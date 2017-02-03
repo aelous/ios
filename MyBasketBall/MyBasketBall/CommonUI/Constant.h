@@ -23,7 +23,6 @@ typedef NS_ENUM(NSInteger, GetDataOperate) {
     GetDataOperateLoadMore = 2      //加载更多
 };
 
-
 #define  LEFT_TO_SCREEN 10
 
 

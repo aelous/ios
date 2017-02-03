@@ -1,18 +1,18 @@
 //
-//  GetTeamInfoStatisticThread.m
+//  GetTeamGloryThread.m
 //  MyBasketBall
 //
-//  Created by lw on 17/1/27.
+//  Created by lw on 17/2/3.
 //  Copyright © 2017年 lizhe. All rights reserved.
 //
 
-#import "GetTeamInfoStatisticThread.h"
+#import "GetTeamInfoGloryThread.h"
 
-@implementation GetTeamInfoStatisticThread
+@implementation GetTeamInfoGloryThread
 
 - (instancetype)initWithTeamId:(int)teamId {
     
-    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/team/teaminfo/statistic"];
+    NSString *url = [NSString stringWithFormat:@"%@%@",PUBLIC_URL,@"/team/teaminfo/glory"];
     [self setUrl:url andTimeout:defaultTimeout];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -22,7 +22,7 @@
     
 }
 
-- (void)requireonPrev:(void (^)())prev success:(void (^)(NSInteger, NSDictionary *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
+- (void)requireonPrev:(void (^)())prev success:(void (^)(NSInteger, NSArray *))success unavaliableNetwork:(void (^)())unavaliableNetwork timeout:(void (^)())timeout exception:(void (^)(NSString *))exception {
     
     self.prev = prev;
     self.unavaliableNetwork = unavaliableNetwork;
@@ -38,16 +38,15 @@
     if (self.success) {
         NSDictionary *dic = [result JSONValue];
         NSInteger code = [DataUtil numberForKey:@"code" inDictionary:dic].integerValue;
-//        NSString *message = [dic valueForKey:@"message"];
+        //        NSString *message = [dic valueForKey:@"message"];
         if (code == 1) {
-            NSDictionary *response = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
+            NSArray *response = [DataUtil arrayForKey:@"response" inDictionary:dic];
             self.success(code,response);
             
         } else {
             self.success(code, nil);
         }
     }
-    
 }
 
 - (void)onUnavaliableNetwork {
