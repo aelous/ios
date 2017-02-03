@@ -9,6 +9,7 @@
 #import "TabLeagueViewController.h"
 #import "UIButton+Custom.h"
 #import "CreateTeamController.h"
+#import "BattleDetailController.h"
 
 @interface TabLeagueViewController ()
 {
@@ -171,6 +172,9 @@
     switch (sender.tag) {
         case 0: {
             NSLog(@"创建联赛");
+            BattleDetailController *battle = [[BattleDetailController alloc] init];
+            battle.title = @"一队 VS 二队";
+            [self.navigationController pushViewController:battle animated:YES];
         }
             break;
         case 1: {

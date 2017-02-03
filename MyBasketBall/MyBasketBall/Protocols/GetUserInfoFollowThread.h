@@ -13,7 +13,7 @@
 @property (nonatomic, copy) void (^prev)();
 @property (nonatomic, copy) void (^unavaliableNetwork)();
 @property (nonatomic, copy) void (^timout)();
-@property (nonatomic, copy) void (^success)(NSString *str);
+@property (nonatomic, copy) void (^success)();
 @property (nonatomic, copy) void (^exception)(NSString* message);
 
 - (instancetype)initWithUserId:(int)userId visitorId:(int)visitorId;

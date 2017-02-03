@@ -98,7 +98,6 @@
 		04B714811DBCBDCE006E067F /* CtsiUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B714071DBCBDCE006E067F /* CtsiUserDefaults.m */; };
 		04BEE5AC1DC22E47000ABDC2 /* LeagueListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEE5AB1DC22E47000ABDC2 /* LeagueListTableViewCell.m */; };
 		04BEE5AF1DC2310D000ABDC2 /* LZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEE5AE1DC2310D000ABDC2 /* LZProgressView.m */; };
-		04C5681A1DDF005A00F36FBC /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C568191DDF005A00F36FBC /* MatchViewController.m */; };
 		194D75C2E7EFAF2EB3921124 /* Pods_MyBasketBall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562C7F37CD302C7802DA4CE3 /* Pods_MyBasketBall.framework */; };
 		9B8E99801E03C0F3003CDDD8 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E997F1E03C0F3003CDDD8 /* MineViewController.m */; };
 		9B8E99831E03C760003CDDD8 /* MineInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E99821E03C760003CDDD8 /* MineInfoCell.m */; };
@@ -117,6 +116,29 @@
 		C96122FA1E226B190084808D /* GetUserInfoJoinThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96122F91E226B190084808D /* GetUserInfoJoinThread.m */; };
 		C96122FD1E226B920084808D /* UserInfoJoinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96122FC1E226B920084808D /* UserInfoJoinModel.m */; };
 		C96123001E226FF40084808D /* GetUserInfoManageThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96122FF1E226FF40084808D /* GetUserInfoManageThread.m */; };
+		C96123061E23D2120084808D /* GetUserInfoStatisticThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123051E23D2120084808D /* GetUserInfoStatisticThread.m */; };
+		C96123101E23D5FE0084808D /* UserInfoStatisticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C961230F1E23D5FE0084808D /* UserInfoStatisticModel.m */; };
+		C961233E1E25229B0084808D /* BattleDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = C961233D1E25229B0084808D /* BattleDetailController.m */; };
+		C96123421E2524F90084808D /* BattleDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123411E2524F90084808D /* BattleDetailHeaderView.m */; };
+		C961234F1E2679500084808D /* GetTeamInfoHeadThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C961234E1E2679500084808D /* GetTeamInfoHeadThread.m */; };
+		C96123531E267BDA0084808D /* TeamHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123521E267BDA0084808D /* TeamHeaderModel.m */; };
+		C96123561E2680D00084808D /* GetTeamInfoFollowThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123551E2680D00084808D /* GetTeamInfoFollowThread.m */; };
+		C96123591E2682DD0084808D /* GetTeamInfoDynamicThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123581E2682DD0084808D /* GetTeamInfoDynamicThread.m */; };
+		C961235C1E2FB3A40084808D /* BattleHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C961235B1E2FB3A40084808D /* BattleHeaderView.xib */; };
+		C96123661E2FBF550084808D /* BattleHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123651E2FBF550084808D /* BattleHeaderView.m */; };
+		C96123691E2FC07C0084808D /* BattleHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123681E2FC07C0084808D /* BattleHeaderModel.m */; };
+		C96123761E3A46FB0084808D /* BattleLiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123741E3A46FB0084808D /* BattleLiveCell.m */; };
+		C96123771E3A46FB0084808D /* BattleLiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C96123751E3A46FB0084808D /* BattleLiveCell.xib */; };
+		C961237A1E3B13D70084808D /* GetTeamInfoStatisticThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123791E3B13D70084808D /* GetTeamInfoStatisticThread.m */; };
+		C961237D1E3D713C0084808D /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C961237C1E3D713C0084808D /* UserModel.m */; };
+		C96123841E3E13340084808D /* TeamMessageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123831E3E13340084808D /* TeamMessageViewModel.m */; };
+		C96123871E4303F70084808D /* GetTeamInfoMemberThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123861E4303F70084808D /* GetTeamInfoMemberThread.m */; };
+		C961238A1E4372E30084808D /* TeamMemberModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123891E4372E30084808D /* TeamMemberModel.m */; };
+		C961238D1E4432080084808D /* GetTeamInfoGloryThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C961238C1E4432080084808D /* GetTeamInfoGloryThread.m */; };
+		C96123901E4437420084808D /* TeamGloryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C961238F1E4437420084808D /* TeamGloryModel.m */; };
+		C96123941E44B3A20084808D /* ManageTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123931E44B3A20084808D /* ManageTeamController.m */; };
+		C96123981E44B3CA0084808D /* JoinTeamController.m in Sources */ = {isa = PBXBuildFile; fileRef = C96123971E44B3CA0084808D /* JoinTeamController.m */; };
+		C961239C1E44B5B20084808D /* ManageItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C961239B1E44B5B20084808D /* ManageItemView.m */; };
 		C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */; };
 		C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A098401DFC38DA00B5B6BD /* MemberDataCell.m */; };
 		C9A098491DFC38DA00B5B6BD /* MemberDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A098411DFC38DA00B5B6BD /* MemberDataCell.xib */; };
@@ -225,10 +247,10 @@
 		046717D91DD07C8200DAB0EB /* LeagueMatchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueMatchTableViewCell.m; path = SubView/LeagueMatchTableViewCell.m; sourceTree = "<group>"; };
 		046717DB1DD08F8E00DAB0EB /* GetLeagueDetailsThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLeagueDetailsThread.h; sourceTree = "<group>"; };
 		046717DC1DD08F8E00DAB0EB /* GetLeagueDetailsThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLeagueDetailsThread.m; sourceTree = "<group>"; };
-		046717DE1DD09A1000DAB0EB /* MatchListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchListModel.h; sourceTree = "<group>"; };
-		046717DF1DD09A1000DAB0EB /* MatchListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchListModel.m; sourceTree = "<group>"; };
-		046717E11DD09B6600DAB0EB /* MatchTeamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchTeamModel.h; sourceTree = "<group>"; };
-		046717E21DD09B6600DAB0EB /* MatchTeamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchTeamModel.m; sourceTree = "<group>"; };
+		046717DE1DD09A1000DAB0EB /* MatchListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchListModel.h; path = ../Classes/League/Entity/MatchListModel.h; sourceTree = "<group>"; };
+		046717DF1DD09A1000DAB0EB /* MatchListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchListModel.m; path = ../Classes/League/Entity/MatchListModel.m; sourceTree = "<group>"; };
+		046717E11DD09B6600DAB0EB /* MatchTeamModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchTeamModel.h; path = ../Classes/League/Entity/MatchTeamModel.h; sourceTree = "<group>"; };
+		046717E21DD09B6600DAB0EB /* MatchTeamModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchTeamModel.m; path = ../Classes/League/Entity/MatchTeamModel.m; sourceTree = "<group>"; };
 		046717E41DD1719500DAB0EB /* LZSimpleTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZSimpleTextView.h; sourceTree = "<group>"; };
 		046717E51DD1719500DAB0EB /* LZSimpleTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZSimpleTextView.m; sourceTree = "<group>"; };
 		049C40161DC88651000878BB /* GetLeagueInSchoolThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLeagueInSchoolThread.h; sourceTree = "<group>"; };
@@ -245,8 +267,8 @@
 		04B712EF1DBCBDCE006E067F /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
 		04B712F01DBCBDCE006E067F /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
 		04B712F11DBCBDCE006E067F /* ViewModelDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelDefine.h; sourceTree = "<group>"; };
-		04B712F71DBCBDCE006E067F /* LeagueListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueListModel.h; path = Entity/LeagueListModel.h; sourceTree = "<group>"; };
-		04B712F81DBCBDCE006E067F /* LeagueListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueListModel.m; path = Entity/LeagueListModel.m; sourceTree = "<group>"; };
+		04B712F71DBCBDCE006E067F /* LeagueListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeagueListModel.h; path = ../Classes/League/Entity/LeagueListModel.h; sourceTree = "<group>"; };
+		04B712F81DBCBDCE006E067F /* LeagueListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueListModel.m; path = ../Classes/League/Entity/LeagueListModel.m; sourceTree = "<group>"; };
 		04B712F91DBCBDCE006E067F /* LeagueBetweenSchoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueBetweenSchoolViewController.h; sourceTree = "<group>"; };
 		04B712FA1DBCBDCE006E067F /* LeagueBetweenSchoolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeagueBetweenSchoolViewController.m; sourceTree = "<group>"; };
 		04B712FB1DBCBDCE006E067F /* LeagueInSchoolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeagueInSchoolViewController.h; sourceTree = "<group>"; };
@@ -412,8 +434,6 @@
 		04BEE5AB1DC22E47000ABDC2 /* LeagueListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeagueListTableViewCell.m; path = View/LeagueListTableViewCell.m; sourceTree = "<group>"; };
 		04BEE5AD1DC2310D000ABDC2 /* LZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LZProgressView.h; path = ../Classes/League/View/LZProgressView.h; sourceTree = "<group>"; };
 		04BEE5AE1DC2310D000ABDC2 /* LZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LZProgressView.m; path = ../Classes/League/View/LZProgressView.m; sourceTree = "<group>"; };
-		04C568181DDF005A00F36FBC /* MatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
-		04C568191DDF005A00F36FBC /* MatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		388C8BDAE46BBFC196840A29 /* Pods-MyBasketBall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyBasketBall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyBasketBall/Pods-MyBasketBall.debug.xcconfig"; sourceTree = "<group>"; };
 		562C7F37CD302C7802DA4CE3 /* Pods_MyBasketBall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyBasketBall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8E997E1E03C0F3003CDDD8 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
@@ -435,18 +455,62 @@
 		C96122E91E2123830084808D /* GetUserInfoFollowThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoFollowThread.m; sourceTree = "<group>"; };
 		C96122EB1E212AEB0084808D /* GetUserInfoBattleThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoBattleThread.h; sourceTree = "<group>"; };
 		C96122EC1E212AEB0084808D /* GetUserInfoBattleThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoBattleThread.m; sourceTree = "<group>"; };
-		C96122EF1E2137DA0084808D /* UserInfoBattleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoBattleModel.h; sourceTree = "<group>"; };
-		C96122F01E2137DA0084808D /* UserInfoBattleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoBattleModel.m; sourceTree = "<group>"; };
+		C96122EF1E2137DA0084808D /* UserInfoBattleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoBattleModel.h; path = ../Classes/Base/UserInfoBattleModel.h; sourceTree = "<group>"; };
+		C96122F01E2137DA0084808D /* UserInfoBattleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoBattleModel.m; path = ../Classes/Base/UserInfoBattleModel.m; sourceTree = "<group>"; };
 		C96122F21E2268270084808D /* GetUserInfoDataThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoDataThread.h; sourceTree = "<group>"; };
 		C96122F31E2268270084808D /* GetUserInfoDataThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoDataThread.m; sourceTree = "<group>"; };
-		C96122F51E226A770084808D /* UserInfoDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoDataModel.h; sourceTree = "<group>"; };
-		C96122F61E226A770084808D /* UserInfoDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoDataModel.m; sourceTree = "<group>"; };
+		C96122F51E226A770084808D /* UserInfoDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoDataModel.h; path = ../Classes/Base/UserInfoDataModel.h; sourceTree = "<group>"; };
+		C96122F61E226A770084808D /* UserInfoDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoDataModel.m; path = ../Classes/Base/UserInfoDataModel.m; sourceTree = "<group>"; };
 		C96122F81E226B190084808D /* GetUserInfoJoinThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoJoinThread.h; sourceTree = "<group>"; };
 		C96122F91E226B190084808D /* GetUserInfoJoinThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoJoinThread.m; sourceTree = "<group>"; };
-		C96122FB1E226B920084808D /* UserInfoJoinModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoJoinModel.h; sourceTree = "<group>"; };
-		C96122FC1E226B920084808D /* UserInfoJoinModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoJoinModel.m; sourceTree = "<group>"; };
+		C96122FB1E226B920084808D /* UserInfoJoinModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoJoinModel.h; path = ../Classes/Base/UserInfoJoinModel.h; sourceTree = "<group>"; };
+		C96122FC1E226B920084808D /* UserInfoJoinModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoJoinModel.m; path = ../Classes/Base/UserInfoJoinModel.m; sourceTree = "<group>"; };
 		C96122FE1E226FF40084808D /* GetUserInfoManageThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoManageThread.h; sourceTree = "<group>"; };
 		C96122FF1E226FF40084808D /* GetUserInfoManageThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoManageThread.m; sourceTree = "<group>"; };
+		C96123041E23D2120084808D /* GetUserInfoStatisticThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetUserInfoStatisticThread.h; sourceTree = "<group>"; };
+		C96123051E23D2120084808D /* GetUserInfoStatisticThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetUserInfoStatisticThread.m; sourceTree = "<group>"; };
+		C961230E1E23D5FE0084808D /* UserInfoStatisticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserInfoStatisticModel.h; path = ../Classes/Base/UserInfoStatisticModel.h; sourceTree = "<group>"; };
+		C961230F1E23D5FE0084808D /* UserInfoStatisticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserInfoStatisticModel.m; path = ../Classes/Base/UserInfoStatisticModel.m; sourceTree = "<group>"; };
+		C961233C1E25229B0084808D /* BattleDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleDetailController.h; path = ../BattleDetailController.h; sourceTree = "<group>"; };
+		C961233D1E25229B0084808D /* BattleDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleDetailController.m; path = ../BattleDetailController.m; sourceTree = "<group>"; };
+		C96123401E2524F90084808D /* BattleDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleDetailHeaderView.h; sourceTree = "<group>"; };
+		C96123411E2524F90084808D /* BattleDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleDetailHeaderView.m; sourceTree = "<group>"; };
+		C961234D1E2679500084808D /* GetTeamInfoHeadThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoHeadThread.h; sourceTree = "<group>"; };
+		C961234E1E2679500084808D /* GetTeamInfoHeadThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoHeadThread.m; sourceTree = "<group>"; };
+		C96123511E267BDA0084808D /* TeamHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TeamHeaderModel.h; path = ../Classes/TeamHeaderModel.h; sourceTree = "<group>"; };
+		C96123521E267BDA0084808D /* TeamHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TeamHeaderModel.m; path = ../Classes/TeamHeaderModel.m; sourceTree = "<group>"; };
+		C96123541E2680D00084808D /* GetTeamInfoFollowThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoFollowThread.h; sourceTree = "<group>"; };
+		C96123551E2680D00084808D /* GetTeamInfoFollowThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoFollowThread.m; sourceTree = "<group>"; };
+		C96123571E2682DD0084808D /* GetTeamInfoDynamicThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoDynamicThread.h; sourceTree = "<group>"; };
+		C96123581E2682DD0084808D /* GetTeamInfoDynamicThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoDynamicThread.m; sourceTree = "<group>"; };
+		C961235B1E2FB3A40084808D /* BattleHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleHeaderView.xib; sourceTree = "<group>"; };
+		C96123641E2FBF550084808D /* BattleHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleHeaderView.h; sourceTree = "<group>"; };
+		C96123651E2FBF550084808D /* BattleHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleHeaderView.m; sourceTree = "<group>"; };
+		C96123671E2FC07C0084808D /* BattleHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BattleHeaderModel.h; path = ../Classes/BattleHeaderModel.h; sourceTree = "<group>"; };
+		C96123681E2FC07C0084808D /* BattleHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BattleHeaderModel.m; path = ../Classes/BattleHeaderModel.m; sourceTree = "<group>"; };
+		C96123731E3A46FB0084808D /* BattleLiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleLiveCell.h; sourceTree = "<group>"; };
+		C96123741E3A46FB0084808D /* BattleLiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleLiveCell.m; sourceTree = "<group>"; };
+		C96123751E3A46FB0084808D /* BattleLiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BattleLiveCell.xib; sourceTree = "<group>"; };
+		C96123781E3B13D70084808D /* GetTeamInfoStatisticThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoStatisticThread.h; sourceTree = "<group>"; };
+		C96123791E3B13D70084808D /* GetTeamInfoStatisticThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoStatisticThread.m; sourceTree = "<group>"; };
+		C961237B1E3D713C0084808D /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		C961237C1E3D713C0084808D /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		C96123821E3E13340084808D /* TeamMessageViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMessageViewModel.h; sourceTree = "<group>"; };
+		C96123831E3E13340084808D /* TeamMessageViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMessageViewModel.m; sourceTree = "<group>"; };
+		C96123851E4303F70084808D /* GetTeamInfoMemberThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoMemberThread.h; sourceTree = "<group>"; };
+		C96123861E4303F70084808D /* GetTeamInfoMemberThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoMemberThread.m; sourceTree = "<group>"; };
+		C96123881E4372E30084808D /* TeamMemberModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamMemberModel.h; sourceTree = "<group>"; };
+		C96123891E4372E30084808D /* TeamMemberModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamMemberModel.m; sourceTree = "<group>"; };
+		C961238B1E4432080084808D /* GetTeamInfoGloryThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetTeamInfoGloryThread.h; sourceTree = "<group>"; };
+		C961238C1E4432080084808D /* GetTeamInfoGloryThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetTeamInfoGloryThread.m; sourceTree = "<group>"; };
+		C961238E1E4437420084808D /* TeamGloryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamGloryModel.h; sourceTree = "<group>"; };
+		C961238F1E4437420084808D /* TeamGloryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamGloryModel.m; sourceTree = "<group>"; };
+		C96123921E44B3A20084808D /* ManageTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTeamController.h; sourceTree = "<group>"; };
+		C96123931E44B3A20084808D /* ManageTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTeamController.m; sourceTree = "<group>"; };
+		C96123961E44B3CA0084808D /* JoinTeamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinTeamController.h; sourceTree = "<group>"; };
+		C96123971E44B3CA0084808D /* JoinTeamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinTeamController.m; sourceTree = "<group>"; };
+		C961239A1E44B5B20084808D /* ManageItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageItemView.h; sourceTree = "<group>"; };
+		C961239B1E44B5B20084808D /* ManageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageItemView.m; sourceTree = "<group>"; };
 		C9A0983B1DFC38C000B5B6BD /* MemberHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberHeaderView.h; sourceTree = "<group>"; };
 		C9A0983C1DFC38C000B5B6BD /* MemberHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberHeaderView.m; sourceTree = "<group>"; };
 		C9A0983F1DFC38DA00B5B6BD /* MemberDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberDataCell.h; sourceTree = "<group>"; };
@@ -458,8 +522,8 @@
 		C9A098451DFC38DA00B5B6BD /* MemberJoinCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemberJoinCell.h; sourceTree = "<group>"; };
 		C9A098461DFC38DA00B5B6BD /* MemberJoinCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemberJoinCell.m; sourceTree = "<group>"; };
 		C9A098471DFC38DA00B5B6BD /* MemberJoinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MemberJoinCell.xib; sourceTree = "<group>"; };
-		C9A0984E1DFC38E800B5B6BD /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableData.h; sourceTree = "<group>"; };
-		C9A0984F1DFC38E800B5B6BD /* TableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableData.m; sourceTree = "<group>"; };
+		C9A0984E1DFC38E800B5B6BD /* TableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableData.h; path = ../PersonInfo/TableData.h; sourceTree = "<group>"; };
+		C9A0984F1DFC38E800B5B6BD /* TableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableData.m; path = ../PersonInfo/TableData.m; sourceTree = "<group>"; };
 		C9A098511DFC38F600B5B6BD /* MemberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberViewController.h; path = ../PersonInfo/MemberViewController.h; sourceTree = "<group>"; };
 		C9A098521DFC38F600B5B6BD /* MemberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberViewController.m; path = ../PersonInfo/MemberViewController.m; sourceTree = "<group>"; };
 		C9A098551DFC39E900B5B6BD /* UIColor+StringColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+StringColor.h"; sourceTree = "<group>"; };
@@ -578,11 +642,10 @@
 		04B712E91DBCBDCE006E067F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C9A098A11E02D89100B5B6BD /* unknown */,
+				C9A098A11E02D89100B5B6BD /* model */,
 				04B712EA1DBCBDCE006E067F /* Base */,
 				04B712F21DBCBDCE006E067F /* Hot(热门) */,
 				C9A098801DFCF18500B5B6BD /* follow(关注) */,
-				04C568171DDF005A00F36FBC /* Match(？) */,
 				04B712F51DBCBDCE006E067F /* League(比赛) */,
 				04B7130A1DBCBDCE006E067F /* More(更多) */,
 				04B713041DBCBDCE006E067F /* Login */,
@@ -595,6 +658,8 @@
 		04B712EA1DBCBDCE006E067F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C9A0984E1DFC38E800B5B6BD /* TableData.h */,
+				C9A0984F1DFC38E800B5B6BD /* TableData.m */,
 				C9A098A21E02D8A500B5B6BD /* userinfo */,
 				9B8E997D1E03C080003CDDD8 /* personal */,
 				C9A098A31E02E21A00B5B6BD /* message */,
@@ -643,21 +708,11 @@
 				9B8E99791E03B964003CDDD8 /* league-in */,
 				9B8E997A1E03B976003CDDD8 /* league-between */,
 				9B8E997B1E03B992003CDDD8 /* league-date */,
+				C96123441E265AC10084808D /* CreateLeague */,
 				C9D45E0D1E0ABC8800B91ABE /* CreateTeam */,
 			);
 			name = "League(比赛)";
 			path = League;
-			sourceTree = "<group>";
-		};
-		04B712F61DBCBDCE006E067F /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				046717DE1DD09A1000DAB0EB /* MatchListModel.h */,
-				046717DF1DD09A1000DAB0EB /* MatchListModel.m */,
-				046717E11DD09B6600DAB0EB /* MatchTeamModel.h */,
-				046717E21DD09B6600DAB0EB /* MatchTeamModel.m */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		04B713041DBCBDCE006E067F /* Login */ = {
@@ -815,6 +870,8 @@
 		04B7135E1DBCBDCE006E067F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				C96123811E3E09050084808D /* metaData */,
+				C961234C1E2674D20084808D /* TeamInfo */,
 				C96122E41E20C39D0084808D /* Mine */,
 				04B713651DBCBDCE006E067F /* Register */,
 				04B713601DBCBDCE006E067F /* Login */,
@@ -1062,16 +1119,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		04C568171DDF005A00F36FBC /* Match(？) */ = {
-			isa = PBXGroup;
-			children = (
-				04C568181DDF005A00F36FBC /* MatchViewController.h */,
-				04C568191DDF005A00F36FBC /* MatchViewController.m */,
-			);
-			name = "Match(？)";
-			path = MyBasketBall/Protocols/Match;
-			sourceTree = SOURCE_ROOT;
-		};
 		1E8892718D9163306447D85D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1089,8 +1136,6 @@
 				046717D41DD07C3B00DAB0EB /* LeagueDetailsViewController.h */,
 				046717D51DD07C3B00DAB0EB /* LeagueDetailsViewController.m */,
 				9B8E997C1E03BAA4003CDDD8 /* view */,
-				04B712F71DBCBDCE006E067F /* LeagueListModel.h */,
-				04B712F81DBCBDCE006E067F /* LeagueListModel.m */,
 			);
 			name = "league-in";
 			sourceTree = "<group>";
@@ -1201,7 +1246,6 @@
 				04B712FF1DBCBDCE006E067F /* TabLeagueViewController.h */,
 				04B713001DBCBDCE006E067F /* TabLeagueViewController.m */,
 				04BEE5A91DC22E21000ABDC2 /* View */,
-				04B712F61DBCBDCE006E067F /* Entity */,
 			);
 			name = league;
 			sourceTree = "<group>";
@@ -1221,21 +1265,120 @@
 				C96122F91E226B190084808D /* GetUserInfoJoinThread.m */,
 				C96122FE1E226FF40084808D /* GetUserInfoManageThread.h */,
 				C96122FF1E226FF40084808D /* GetUserInfoManageThread.m */,
+				C96123041E23D2120084808D /* GetUserInfoStatisticThread.h */,
+				C96123051E23D2120084808D /* GetUserInfoStatisticThread.m */,
 			);
 			name = Mine;
 			sourceTree = "<group>";
 		};
-		C96122EE1E2131B50084808D /* model */ = {
+		C961233F1E2522C20084808D /* header */ = {
 			isa = PBXGroup;
 			children = (
+				C96123401E2524F90084808D /* BattleDetailHeaderView.h */,
+				C96123411E2524F90084808D /* BattleDetailHeaderView.m */,
+				C961235B1E2FB3A40084808D /* BattleHeaderView.xib */,
+				C96123641E2FBF550084808D /* BattleHeaderView.h */,
+				C96123651E2FBF550084808D /* BattleHeaderView.m */,
+			);
+			name = header;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C96123441E265AC10084808D /* CreateLeague */ = {
+			isa = PBXGroup;
+			children = (
+				C961233C1E25229B0084808D /* BattleDetailController.h */,
+				C961233D1E25229B0084808D /* BattleDetailController.m */,
+				C961233F1E2522C20084808D /* header */,
+				C961236B1E3A46BD0084808D /* cell */,
+			);
+			name = CreateLeague;
+			sourceTree = "<group>";
+		};
+		C961234C1E2674D20084808D /* TeamInfo */ = {
+			isa = PBXGroup;
+			children = (
+				C961234D1E2679500084808D /* GetTeamInfoHeadThread.h */,
+				C961234E1E2679500084808D /* GetTeamInfoHeadThread.m */,
+				C96123541E2680D00084808D /* GetTeamInfoFollowThread.h */,
+				C96123551E2680D00084808D /* GetTeamInfoFollowThread.m */,
+				C96123571E2682DD0084808D /* GetTeamInfoDynamicThread.h */,
+				C96123581E2682DD0084808D /* GetTeamInfoDynamicThread.m */,
+				C96123781E3B13D70084808D /* GetTeamInfoStatisticThread.h */,
+				C96123791E3B13D70084808D /* GetTeamInfoStatisticThread.m */,
+				C96123851E4303F70084808D /* GetTeamInfoMemberThread.h */,
+				C96123861E4303F70084808D /* GetTeamInfoMemberThread.m */,
+				C961238B1E4432080084808D /* GetTeamInfoGloryThread.h */,
+				C961238C1E4432080084808D /* GetTeamInfoGloryThread.m */,
+			);
+			name = TeamInfo;
+			sourceTree = "<group>";
+		};
+		C961236B1E3A46BD0084808D /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				C96123731E3A46FB0084808D /* BattleLiveCell.h */,
+				C96123741E3A46FB0084808D /* BattleLiveCell.m */,
+				C96123751E3A46FB0084808D /* BattleLiveCell.xib */,
+			);
+			name = cell;
+			sourceTree = "<group>";
+		};
+		C96123811E3E09050084808D /* metaData */ = {
+			isa = PBXGroup;
+			children = (
+				046717DE1DD09A1000DAB0EB /* MatchListModel.h */,
+				046717DF1DD09A1000DAB0EB /* MatchListModel.m */,
+				046717E11DD09B6600DAB0EB /* MatchTeamModel.h */,
+				046717E21DD09B6600DAB0EB /* MatchTeamModel.m */,
+				04B712F71DBCBDCE006E067F /* LeagueListModel.h */,
+				04B712F81DBCBDCE006E067F /* LeagueListModel.m */,
+				C96123511E267BDA0084808D /* TeamHeaderModel.h */,
+				C96123521E267BDA0084808D /* TeamHeaderModel.m */,
 				C96122EF1E2137DA0084808D /* UserInfoBattleModel.h */,
 				C96122F01E2137DA0084808D /* UserInfoBattleModel.m */,
 				C96122F51E226A770084808D /* UserInfoDataModel.h */,
 				C96122F61E226A770084808D /* UserInfoDataModel.m */,
 				C96122FB1E226B920084808D /* UserInfoJoinModel.h */,
 				C96122FC1E226B920084808D /* UserInfoJoinModel.m */,
+				C961230E1E23D5FE0084808D /* UserInfoStatisticModel.h */,
+				C961230F1E23D5FE0084808D /* UserInfoStatisticModel.m */,
+				C96123671E2FC07C0084808D /* BattleHeaderModel.h */,
+				C96123681E2FC07C0084808D /* BattleHeaderModel.m */,
+				C96123881E4372E30084808D /* TeamMemberModel.h */,
+				C96123891E4372E30084808D /* TeamMemberModel.m */,
+				C961238E1E4437420084808D /* TeamGloryModel.h */,
+				C961238F1E4437420084808D /* TeamGloryModel.m */,
 			);
-			name = model;
+			name = metaData;
+			sourceTree = "<group>";
+		};
+		C96123911E44B3760084808D /* manage */ = {
+			isa = PBXGroup;
+			children = (
+				C96123991E44B5940084808D /* view */,
+				C96123921E44B3A20084808D /* ManageTeamController.h */,
+				C96123931E44B3A20084808D /* ManageTeamController.m */,
+			);
+			name = manage;
+			sourceTree = "<group>";
+		};
+		C96123951E44B3A90084808D /* join */ = {
+			isa = PBXGroup;
+			children = (
+				C96123961E44B3CA0084808D /* JoinTeamController.h */,
+				C96123971E44B3CA0084808D /* JoinTeamController.m */,
+			);
+			name = join;
+			sourceTree = "<group>";
+		};
+		C96123991E44B5940084808D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				C961239A1E44B5B20084808D /* ManageItemView.h */,
+				C961239B1E44B5B20084808D /* ManageItemView.m */,
+			);
+			name = view;
 			sourceTree = "<group>";
 		};
 		C9A098391DFC38A200B5B6BD /* view */ = {
@@ -1288,22 +1431,14 @@
 			name = extension;
 			sourceTree = "<group>";
 		};
-		C9A0985E1DFC3C1100B5B6BD /* testdata */ = {
-			isa = PBXGroup;
-			children = (
-				C9A0984E1DFC38E800B5B6BD /* TableData.h */,
-				C9A0984F1DFC38E800B5B6BD /* TableData.m */,
-			);
-			name = testdata;
-			path = PersonInfo;
-			sourceTree = "<group>";
-		};
 		C9A098661DFC573800B5B6BD /* TeamDetailInfo */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0986A1DFC575D00B5B6BD /* view */,
 				C9A098671DFC575600B5B6BD /* TeamMessageController.h */,
 				C9A098681DFC575600B5B6BD /* TeamMessageController.m */,
+				C96123821E3E13340084808D /* TeamMessageViewModel.h */,
+				C96123831E3E13340084808D /* TeamMessageViewModel.m */,
+				C9A0986A1DFC575D00B5B6BD /* view */,
 			);
 			name = TeamDetailInfo;
 			path = ..;
@@ -1346,12 +1481,13 @@
 			name = view;
 			sourceTree = "<group>";
 		};
-		C9A098A11E02D89100B5B6BD /* unknown */ = {
+		C9A098A11E02D89100B5B6BD /* model */ = {
 			isa = PBXGroup;
 			children = (
-				C9A0985E1DFC3C1100B5B6BD /* testdata */,
+				C961237B1E3D713C0084808D /* UserModel.h */,
+				C961237C1E3D713C0084808D /* UserModel.m */,
 			);
-			name = unknown;
+			name = model;
 			sourceTree = "<group>";
 		};
 		C9A098A21E02D8A500B5B6BD /* userinfo */ = {
@@ -1359,7 +1495,6 @@
 			children = (
 				C9A098511DFC38F600B5B6BD /* MemberViewController.h */,
 				C9A098521DFC38F600B5B6BD /* MemberViewController.m */,
-				C96122EE1E2131B50084808D /* model */,
 				C9A098391DFC38A200B5B6BD /* view */,
 			);
 			name = userinfo;
@@ -1382,6 +1517,8 @@
 				C9D45E0E1E0ABEFC00B91ABE /* CreateTeamController.h */,
 				C9D45E0F1E0ABEFC00B91ABE /* CreateTeamController.m */,
 				C9A098661DFC573800B5B6BD /* TeamDetailInfo */,
+				C96123911E44B3760084808D /* manage */,
+				C96123951E44B3A90084808D /* join */,
 			);
 			name = CreateTeam;
 			sourceTree = "<group>";
@@ -1521,11 +1658,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04B714591DBCBDCE006E067F /* close-button-2.png in Resources */,
+				C961235C1E2FB3A40084808D /* BattleHeaderView.xib in Resources */,
 				04B712E21DBCBD35006E067F /* LaunchScreen.storyboard in Resources */,
 				C9A0987C1DFC577A00B5B6BD /* TeamGloryCell.xib in Resources */,
 				04B7145A1DBCBDCE006E067F /* close-button-3.png in Resources */,
 				C9A0984D1DFC38DA00B5B6BD /* MemberJoinCell.xib in Resources */,
 				04B712DF1DBCBD35006E067F /* Assets.xcassets in Resources */,
+				C96123771E3A46FB0084808D /* BattleLiveCell.xib in Resources */,
 				C9A0987A1DFC577A00B5B6BD /* TeamMemberCell.xib in Resources */,
 				C9A0984B1DFC38DA00B5B6BD /* MemberBattleCell.xib in Resources */,
 				C9A098781DFC577A00B5B6BD /* TeamStatusCell.xib in Resources */,
@@ -1605,12 +1744,14 @@
 				C9D45E271E1BDA6800B91ABE /* GetCreateTeamThread.m in Sources */,
 				04B714081DBCBDCE006E067F /* BaseViewController.m in Sources */,
 				04B7146E1DBCBDCE006E067F /* JGProgressHUDPieIndicatorView.m in Sources */,
+				C96123941E44B3A20084808D /* ManageTeamController.m in Sources */,
 				04B7147C1DBCBDCE006E067F /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				C9A0983D1DFC38C000B5B6BD /* MemberHeaderView.m in Sources */,
 				04B7147B1DBCBDCE006E067F /* SBJsonWriter.m in Sources */,
 				04B714801DBCBDCE006E067F /* UIViewExt.m in Sources */,
 				04B7143C1DBCBDCE006E067F /* PostRegisterThread.m in Sources */,
 				C9A0984C1DFC38DA00B5B6BD /* MemberJoinCell.m in Sources */,
+				C96123871E4303F70084808D /* GetTeamInfoMemberThread.m in Sources */,
 				04B7144B1DBCBDCE006E067F /* CTSIGlobalUserDefault.m in Sources */,
 				C9A0985D1DFC39E900B5B6BD /* UIButton+Custom.m in Sources */,
 				04B714111DBCBDCE006E067F /* LoginViewController.m in Sources */,
@@ -1620,6 +1761,7 @@
 				04B7144F1DBCBDCE006E067F /* DateUtil.m in Sources */,
 				049C40181DC88651000878BB /* GetLeagueInSchoolThread.m in Sources */,
 				04B714141DBCBDCE006E067F /* RegisterPersonInfoViewController.m in Sources */,
+				C96123661E2FBF550084808D /* BattleHeaderView.m in Sources */,
 				04B714121DBCBDCE006E067F /* LoginViewModel.m in Sources */,
 				C9A098891E00468F00B5B6BD /* UIImage+color.m in Sources */,
 				04B7146C1DBCBDCE006E067F /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,
@@ -1628,25 +1770,30 @@
 				04B714731DBCBDCE006E067F /* SBJsonStreamParserAccumulator.m in Sources */,
 				04B7140C1DBCBDCE006E067F /* LeagueBetweenSchoolViewController.m in Sources */,
 				04B714811DBCBDCE006E067F /* CtsiUserDefaults.m in Sources */,
+				C96123761E3A46FB0084808D /* BattleLiveCell.m in Sources */,
 				C96122FD1E226B920084808D /* UserInfoJoinModel.m in Sources */,
 				04B714611DBCBDCE006E067F /* PutJsonHttpThread.m in Sources */,
 				C9A098611DFC4D8D00B5B6BD /* HotViewController.m in Sources */,
 				C96122F41E2268270084808D /* GetUserInfoDataThread.m in Sources */,
 				C9A0985B1DFC39E900B5B6BD /* UIColor+StringColor.m in Sources */,
+				C961237D1E3D713C0084808D /* UserModel.m in Sources */,
 				04B7145C1DBCBDCE006E067F /* GetHttpThread.m in Sources */,
 				C9A0987B1DFC577A00B5B6BD /* TeamGloryCell.m in Sources */,
 				C9A098791DFC577A00B5B6BD /* TeamMemberCell.m in Sources */,
 				04B7144C1DBCBDCE006E067F /* CtsiLocationManager.m in Sources */,
 				04B7142B1DBCBDCE006E067F /* MyCustomTextField.m in Sources */,
 				04B7146F1DBCBDCE006E067F /* JGProgressHUDRingIndicatorView.m in Sources */,
+				C96123561E2680D00084808D /* GetTeamInfoFollowThread.m in Sources */,
 				04B714721DBCBDCE006E067F /* SBJsonStreamParser.m in Sources */,
 				04B7140D1DBCBDCE006E067F /* LeagueInSchoolViewController.m in Sources */,
 				04B714501DBCBDCE006E067F /* DimensionUtil.m in Sources */,
 				04B714781DBCBDCE006E067F /* SBJsonStreamWriterState.m in Sources */,
+				C961234F1E2679500084808D /* GetTeamInfoHeadThread.m in Sources */,
 				04B7147E1DBCBDCE006E067F /* UIView+Toast.m in Sources */,
 				04B712D71DBCBD35006E067F /* AppDelegate.m in Sources */,
 				04B714751DBCBDCE006E067F /* SBJsonStreamParserState.m in Sources */,
 				04B7145E1DBCBDCE006E067F /* PostHttpThread.m in Sources */,
+				C96123841E3E13340084808D /* TeamMessageViewModel.m in Sources */,
 				C9D45E1D1E116E4900B91ABE /* MoreSearchController.m in Sources */,
 				04B7140F1DBCBDCE006E067F /* TabLeagueViewController.m in Sources */,
 				046717DD1DD08F8E00DAB0EB /* GetLeagueDetailsThread.m in Sources */,
@@ -1660,10 +1807,13 @@
 				04B714581DBCBDCE006E067F /* DeleteHttpThread.m in Sources */,
 				C9A0985C1DFC39E900B5B6BD /* UILabel+Custom.m in Sources */,
 				04B714311DBCBDCE006E067F /* UIView+Extension.m in Sources */,
+				C961238D1E4432080084808D /* GetTeamInfoGloryThread.m in Sources */,
 				04B7142A1DBCBDCE006E067F /* MyCustomButton.m in Sources */,
 				C9A098501DFC38E800B5B6BD /* TableData.m in Sources */,
 				C96122ED1E212AEB0084808D /* GetUserInfoBattleThread.m in Sources */,
 				04B7143B1DBCBDCE006E067F /* GetVerifyCodeThread.m in Sources */,
+				C96123531E267BDA0084808D /* TeamHeaderModel.m in Sources */,
+				C96123591E2682DD0084808D /* GetTeamInfoDynamicThread.m in Sources */,
 				9BF000C31DF6CBDC0003F3F9 /* LZGlobalUtil.m in Sources */,
 				04B714171DBCBDCE006E067F /* RegisterChooseTextField.m in Sources */,
 				04B7142E1DBCBDCE006E067F /* LZPickerNum.m in Sources */,
@@ -1674,7 +1824,9 @@
 				04B714711DBCBDCE006E067F /* SBJsonParser.m in Sources */,
 				04B714161DBCBDCE006E067F /* RegisterViewController.m in Sources */,
 				C9A0987F1DFCF0D900B5B6BD /* MoreViewController.m in Sources */,
+				C96123421E2524F90084808D /* BattleDetailHeaderView.m in Sources */,
 				C9A098B61E05267100B5B6BD /* MoreTableCell.m in Sources */,
+				C96123901E4437420084808D /* TeamGloryModel.m in Sources */,
 				04B714791DBCBDCE006E067F /* SBJsonTokeniser.m in Sources */,
 				046717E01DD09A1000DAB0EB /* MatchListModel.m in Sources */,
 				04B714771DBCBDCE006E067F /* SBJsonStreamWriterAccumulator.m in Sources */,
@@ -1682,8 +1834,12 @@
 				04B712D41DBCBD35006E067F /* main.m in Sources */,
 				04B714601DBCBDCE006E067F /* PutBodyHttpThread.m in Sources */,
 				04BEE5AF1DC2310D000ABDC2 /* LZProgressView.m in Sources */,
+				C961238A1E4372E30084808D /* TeamMemberModel.m in Sources */,
 				04B7147F1DBCBDCE006E067F /* UIViewController+BackButtonHandler.m in Sources */,
+				C961233E1E25229B0084808D /* BattleDetailController.m in Sources */,
+				C96123101E23D5FE0084808D /* UserInfoStatisticModel.m in Sources */,
 				C96122F71E226A770084808D /* UserInfoDataModel.m in Sources */,
+				C96123691E2FC07C0084808D /* BattleHeaderModel.m in Sources */,
 				C9D45E101E0ABEFC00B91ABE /* CreateTeamController.m in Sources */,
 				04B714641DBCBDCE006E067F /* LKDBHelper.m in Sources */,
 				04B714191DBCBDCE006E067F /* RegisterTextField.m in Sources */,
@@ -1694,27 +1850,30 @@
 				C96122FA1E226B190084808D /* GetUserInfoJoinThread.m in Sources */,
 				04B7140B1DBCBDCE006E067F /* LeagueListModel.m in Sources */,
 				C9A098A61E02E23500B5B6BD /* MessageViewController.m in Sources */,
+				C961237A1E3B13D70084808D /* GetTeamInfoStatisticThread.m in Sources */,
 				C9A098691DFC575600B5B6BD /* TeamMessageController.m in Sources */,
 				04B7147D1DBCBDCE006E067F /* UIView+SDAutoLayout.m in Sources */,
 				9B8E99831E03C760003CDDD8 /* MineInfoCell.m in Sources */,
 				04B7146B1DBCBDCE006E067F /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				04B714681DBCBDCE006E067F /* JGProgressHUD.m in Sources */,
 				04B7142D1DBCBDCE006E067F /* LZDateTimePicker.m in Sources */,
+				C96123981E44B3CA0084808D /* JoinTeamController.m in Sources */,
 				04B714531DBCBDCE006E067F /* GEOUtil.m in Sources */,
 				04BEE5AC1DC22E47000ABDC2 /* LeagueListTableViewCell.m in Sources */,
 				046717E31DD09B6600DAB0EB /* MatchTeamModel.m in Sources */,
 				04B714741DBCBDCE006E067F /* SBJsonStreamParserAdapter.m in Sources */,
 				04B714651DBCBDCE006E067F /* LKDBUtils.m in Sources */,
 				04B714301DBCBDCE006E067F /* LLTabBarItem.m in Sources */,
+				C96123061E23D2120084808D /* GetUserInfoStatisticThread.m in Sources */,
 				C938D5C91E0574ED0078B5C5 /* IndividualController.m in Sources */,
 				C9A098481DFC38DA00B5B6BD /* MemberDataCell.m in Sources */,
 				046717DA1DD07C8200DAB0EB /* LeagueMatchTableViewCell.m in Sources */,
 				C96122E71E20C5460084808D /* GetUserInfoHeadThread.m in Sources */,
 				04B714091DBCBDCE006E067F /* BaseViewModel.m in Sources */,
-				04C5681A1DDF005A00F36FBC /* MatchViewController.m in Sources */,
 				04B714671DBCBDCE006E067F /* NSObject+LKModel.m in Sources */,
 				C938D5CC1E0575090078B5C5 /* FollowTeamController.m in Sources */,
 				04B7147A1DBCBDCE006E067F /* SBJsonUTF8Stream.m in Sources */,
+				C961239C1E44B5B20084808D /* ManageItemView.m in Sources */,
 				04B714391DBCBDCE006E067F /* PostLoginThread.m in Sources */,
 				04B714761DBCBDCE006E067F /* SBJsonStreamWriter.m in Sources */,
 				04B714701DBCBDCE006E067F /* NSObject+SBJson.m in Sources */,

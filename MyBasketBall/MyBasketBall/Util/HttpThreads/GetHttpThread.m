@@ -70,14 +70,12 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        NSHTTPURLResponse* response = task.response;
+        NSHTTPURLResponse* response = (NSHTTPURLResponse *)task.response;
         NSString* str_error=[NSString stringWithFormat:@"%@",error];
         
-        if(error.code==-ErrorCodeForRequestTimeout)
-        {
+        if (error.code==-ErrorCodeForRequestTimeout) {
             [self onTimeout];
-        }
-        else{
+        } else {
             [self exception:response.statusCode message:str_error];
         }
     }];
@@ -92,7 +90,7 @@
 //    [LogUtil write:@"excption" value:@"unavaliableNetwork"];
 }
 
--(void)onSuccess:(NSString *)result{
+-(void)onSuccess:(NSString *)result {
 //  [LogUtil write:@"result" value:result];
     NSLog(@"http result is : %@",result);
 }

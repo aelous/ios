@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TeamHeaderModel.h"
 
 @protocol TeamHeaderViewButtonSelectedDelegate <NSObject>
 
@@ -17,5 +18,8 @@
 @interface TeamHeaderView : UIView
 
 @property (nonatomic,weak) id<TeamHeaderViewButtonSelectedDelegate> delegate;
+@property (nonatomic, strong) TeamHeaderModel *headerModel;
+@property (nonatomic, copy) void(^followBlock)(void);
+@property (nonatomic, strong) UIButton *follow;
 
 @end

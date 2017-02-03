@@ -26,9 +26,7 @@ typedef NS_ENUM(NSInteger, SelectedType) {
 @interface MemberViewController ()<MemberHeaderViewButtonSelectedDelegate>
 
 @property (nonatomic, assign) int selectedType;
-
 @property (nonatomic, strong) NSMutableArray *data;
-
 @property (nonatomic, assign) int testHeight;
 
 @end
@@ -41,11 +39,6 @@ typedef NS_ENUM(NSInteger, SelectedType) {
     [super viewDidLoad];
     [self setupUI];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
