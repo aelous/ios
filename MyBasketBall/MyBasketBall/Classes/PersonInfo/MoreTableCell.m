@@ -80,7 +80,7 @@
     .leftEqualToView(self.contentView)
     .rightEqualToView(self.contentView)
     .bottomEqualToView(self.contentView)
-    .heightIs(1);
+    .heightIs(0.5);
     
 }
 

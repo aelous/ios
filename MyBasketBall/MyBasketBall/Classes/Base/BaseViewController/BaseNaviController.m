@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor ms_colorWithHexString:@"#224FA2"];
     [self setNavigationBar];
     
 //    [navigationBar setShadowImage:image];

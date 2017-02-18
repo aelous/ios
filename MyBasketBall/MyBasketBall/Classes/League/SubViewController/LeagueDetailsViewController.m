@@ -12,7 +12,6 @@
 #import "SDAutoLayout.h"
 #import "LZSimpleTextView.h"
 #import "LeagueMatchTableViewCell.h"
-#import "MatchViewController.h"
 @interface LeagueDetailsViewController ()
 
 @property (nonatomic, strong)UIImageView *imageViewLogo;

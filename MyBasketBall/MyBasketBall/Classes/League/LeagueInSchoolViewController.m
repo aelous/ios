@@ -8,7 +8,6 @@
 
 #import "LeagueInSchoolViewController.h"
 #import "MJRefresh.h"
-
 #import "GetLeagueInSchoolThread.h"
 #import "LeagueListTableViewCell.h"
 #import "GetLeagueDetailsThread.h"
@@ -33,11 +32,6 @@
     [self initRefresh];
     [self.myTableView.mj_header beginRefreshing];
 
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)initTableView {
@@ -84,10 +78,6 @@
 }
 
 #pragma mark -UITableView Data Source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 1;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.arrayDatas.count;
@@ -174,6 +164,7 @@
     [thread requireonPrev:^{
         ;
     } success:^(NSDictionary *dic) {
+        NSLog(@"联赛详细信息");
         LeagueDetailsViewController *VC = [[LeagueDetailsViewController alloc] init];
         [VC settingData];
         [self.navigationController pushViewController:VC animated:YES];

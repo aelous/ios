@@ -11,5 +11,6 @@
 @interface UILabel (Custom)
 
 + (UILabel *)labelWithTitle:(NSString *)title size:(float)size colorString:(NSString *)color;
++ (UILabel *)labelWithSize:(float)size color:(NSString *)color;
 
 @end

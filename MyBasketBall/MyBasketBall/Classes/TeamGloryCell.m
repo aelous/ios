@@ -8,18 +8,14 @@
 
 #import "TeamGloryCell.h"
 
+@interface TeamGloryCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *name;
+@property (weak, nonatomic) IBOutlet UILabel *glory;
+
+@end
+
 @implementation TeamGloryCell
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
 
 + (TeamGloryCell *)cellWithTableView:(UITableView *)tableView {
 
@@ -30,6 +26,14 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
+}
+
+- (void)setModel:(TeamGloryModel *)model {
+
+    _model = model;
+    self.name.text = [NSString stringWithFormat:@"%@(%@)",model.name,model.year];
+    self.glory.text = model.glory;
+    
 }
 
 @end

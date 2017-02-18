@@ -11,6 +11,7 @@
 #import "LZTabBarViewController.h"
 @interface AppDelegate ()
 
+
 @end
 
 @implementation AppDelegate
@@ -19,6 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    _userModel = [[UserModel alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
 //    BOOL userDefaults = [[NSUserDefaults standardUserDefaults] objectForKey:@"firstLogin"];
@@ -36,6 +38,11 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
++ (AppDelegate *)instance {
+
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 
 

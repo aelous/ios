@@ -7,14 +7,12 @@
 //
 
 #import "MemberHeaderView.h"
-#import "UIColor+StringColor.h"
 #import "UILabel+Custom.h"
 
 @interface MemberHeaderView()
 
 @property (nonatomic, strong) UIImageView *portraitView;
 @property (nonatomic, strong) UILabel *titleLabel;
-
 @property (nonatomic, strong) UIView *selectedView;
 @property (nonatomic, strong) UIButton *selectedButton;
 

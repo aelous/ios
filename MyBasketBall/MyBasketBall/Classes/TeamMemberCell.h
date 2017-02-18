@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TeamMemberModel.h"
 
 @interface TeamMemberCell : UITableViewCell
 
+@property (nonatomic, strong) TeamMemberModel *model;
 + (TeamMemberCell *)cellWithTableView:(UITableView *)tableView;
 
 @end

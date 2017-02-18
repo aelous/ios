@@ -8,6 +8,21 @@
 
 #import "MemberBattleCell.h"
 
+@interface MemberBattleCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *time;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *followCount;
+@property (weak, nonatomic) IBOutlet UILabel *status;
+
+@property (weak, nonatomic) IBOutlet UILabel *name1;
+@property (weak, nonatomic) IBOutlet UILabel *score1;
+@property (weak, nonatomic) IBOutlet UILabel *name2;
+@property (weak, nonatomic) IBOutlet UILabel *score2;
+
+
+@end
+
 @implementation MemberBattleCell
 
 - (void)awakeFromNib {
@@ -30,6 +45,23 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
+}
+
+- (void)setModel:(UserInfoBattleModel *)model {
+
+    _model = model;
+    self.time.text = model.time;
+    self.address.text = model.address;
+    self.followCount.text = model.focusNum;
+    self.status.text = model.status;
+    NSLog(@"team count:%lu",(unsigned long)model.teamArray.count);
+    TeamInfo *team1 = model.teamArray[0];
+    self.name1.text = team1.name;
+    self.score1.text = team1.score;
+    TeamInfo *team2 = model.teamArray[1];
+    self.name2.text = team2.name;
+    self.name2.text = team2.score;
+    
 }
 
 @end

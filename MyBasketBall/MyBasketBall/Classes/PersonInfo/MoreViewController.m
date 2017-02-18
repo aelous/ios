@@ -8,6 +8,7 @@
 
 #import "MoreViewController.h"
 #import "MoreTableCell.h"
+#import "MoreSearchController.h"
 
 @interface MoreViewController ()
 
@@ -57,6 +58,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MoreSearchController *searchController = [[MoreSearchController alloc] init];
+    switch (indexPath.row) {
+        case 0: {
+            searchController.type = MORE_TEAM;
+            searchController.title = @"所有球队";
+        }
+            break;
+        case 1: {
+            searchController.type = MORE_MEMBER;
+            searchController.title = @"所有球员";
+        }
+            break;
+        case 2: {
+            searchController.type = MORE_LEAGUE;
+            searchController.title = @"所有联赛";
+        }
+            break;
+        default:
+            break;
+    }
+    [self.navigationController pushViewController:searchController animated:YES];
+    
 }
 
 @end

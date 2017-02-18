@@ -85,7 +85,6 @@
         }else if (2 == index) {
             to = controller.followLeague;
         }
-        
         [controller transitionFromViewController:controller.currentController
                                 toViewController:to
                                         duration:0
@@ -98,35 +97,7 @@
                                           }
                                           
                                       }];
-        
     };
-    
-/*
-    __weak typeof(self)weakSelf = self;
-    _indexBlock = ^(NSInteger index){
-        UIViewController *to;
-        if (0 == index) {
-            to = weakSelf.individual;
-        }else if (1 == index){
-            to = weakSelf.followTeam;
-        }else if (2 == index) {
-            to = weakSelf.followLeague;
-        }
-        
-        [weakSelf transitionFromViewController:weakSelf.currentController
-                                toViewController:to
-                                        duration:0
-                                         options:(UIViewAnimationOptionTransitionNone)
-                                      animations:^{
-                                      }
-                                      completion:^(BOOL finished) {
-                                          if (finished) {
-                                              weakSelf.currentController = to;
-                                          }
-                                          
-                                      }];
-    };
-*/
 }
 
 @end

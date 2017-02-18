@@ -60,17 +60,13 @@
         NSString* message=[dic valueForKey:@"message"];
         
         if( code == 1 ){
-
-//            NSDictionary * response = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
+//          NSDictionary * response = [DataUtil dictionaryForKey:@"response" inDictionary:dic];
             NSArray *array = [DataUtil arrayForKey:@"response" inDictionary:dic];
             self.success(array);
             NSLog(@"%@",dic);
-            
         }else{
             [self exception:0 message:message];
-            
         }
-        
     }
 }
 
@@ -79,8 +75,6 @@
     if(self.timout){
         self.timout();
     }
-    
-    
 }
 
 -(void)exception:(NSInteger) code message:(NSString *) message{
